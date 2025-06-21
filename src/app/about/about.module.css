@@ -1,0 +1,90 @@
+.aboutMain {
+  font-family: sans-serif;
+  color: #222;
+}
+
+.hero {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.bgImage {
+  object-fit: contain;
+  z-index: 1;
+}
+
+.section,
+.sectionAlt {
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.sectionAlt {
+  background-color: #f2f2f2;
+}
+
+.section h2,
+.sectionAlt h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: #4a148c;
+  margin-bottom: 1rem;
+}
+
+.section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+.iconList {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-top: 2rem;
+  padding: 0;
+}
+
+.iconList li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 150px;
+  font-weight: bold;
+  color: #333;
+}
+
+.icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: goldenrod;
+}
+
+.cta {
+  padding: 3rem 1.5rem;
+  text-align: center;
+  background-color: gold;
+  color: #111;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.ctaLink {
+  color: #535553;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.ctaLink:hover {
+  color: #069a46;
+}

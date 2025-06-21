@@ -1,0 +1,88 @@
+.productsSection {
+  padding: 60px 20px;
+  background: #f7f7f7;
+  text-align: center;
+}
+
+.headerSection {
+  display: flex;
+}
+
+.left {
+  flex: 1;
+}
+
+.heading {
+  flex: 2;
+}
+
+.heroImage {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.heading h2 {
+  font-size: 2.5rem;
+  color: #4b0082;
+  margin-bottom: 10px;
+}
+
+.heading p {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  padding: 2rem;
+}
+
+.slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 2rem;
+  padding-bottom: 8px;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slide {
+  flex: 0 0 auto;
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.slide:hover {
+  transform: scale(1.05);
+}
+
+.cta {
+  margin-top: 40px;
+}
+
+.ctaBtn {
+  background-color: #4b0082;
+  color: #fff;
+  padding: 14px 28px;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.ctaBtn:hover {
+  background-color: #360063;
+}
