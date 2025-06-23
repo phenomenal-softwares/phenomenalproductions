@@ -1,7 +1,8 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import '@/styles/navbar.css'; // We’ll create this CSS file next
+import { useState } from "react";
+import Link from "next/link";
+import "@/styles/navbar.css";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,12 +19,22 @@ export default function Navbar() {
           ☰
         </button>
 
-        <ul className={`navbar-links ${menuOpen ? 'open' : ''}`}>
-          <li><a href="/">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="/products">Products</a></li>
-          <li><a href="/client-form">Create App</a></li>
-          <li><a href="/contact">Contact</a></li>
+        <ul className={`navbar-links ${menuOpen ? "open" : ""}`}>
+          <li>
+            <Link href="/">Home</Link>
+          </li>
+          <li>
+            <Link href="/about">About</Link>
+          </li>
+          <li>
+            <Link href="/products">Products</Link>
+          </li>
+          <li>
+            <Link href="/client-form">Create App</Link>
+          </li>
+          <li>
+            <Link href="/contact">Contact</Link>
+          </li>
         </ul>
       </div>
     </nav>
