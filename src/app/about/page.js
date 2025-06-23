@@ -120,7 +120,7 @@ export default function AboutPage() {
         <h3>
           Have an idea?{" "}
           <Link href="/client-form" className={styles.ctaLink}>
-            Let’s build it together.
+            Let's build it together.
           </Link>
         </h3>
       </motion.section>
