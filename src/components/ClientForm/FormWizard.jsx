@@ -87,9 +87,9 @@ export default function FormWizard() {
 
   return (
     <div className={styles.formWrapper}>
-      <h2 className={styles.heading}>Let's Build Something Amazing</h2>
+      <h2 className={styles.heading}>Let&aposs Build Something Amazing</h2>
       <p className={styles.subtext}>
-        Fill the form to get started. We're excited to work with you!
+        Fill the form to get started. We&aposre excited to work with you!
       </p>
 
       {step === 1 && (

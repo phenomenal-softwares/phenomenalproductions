@@ -43,7 +43,7 @@ export default function FounderSection() {
             gap between people and possibility.
           </p>
           <p className={styles.bioText}>
-            Whether it's building intuitive apps or launching platforms that
+            Whether it&aposs building intuitive apps or launching platforms that
             make life easier, he brings clarity, speed, and precision — always
             with an eye on excellence.
           </p>
