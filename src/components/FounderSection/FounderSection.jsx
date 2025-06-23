@@ -26,7 +26,7 @@ export default function FounderSection() {
           <Image
             src="/images/portrait.png"
             alt="Abiodun Ojo"
-            width={300}
+            width={400}
             height={400}
             className={styles.founderImage}
             priority

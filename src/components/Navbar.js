@@ -23,6 +23,7 @@ export default function Navbar() {
           <li><a href="#about">About</a></li>
           <li><a href="/products">Products</a></li>
           <li><a href="/client-form">Create App</a></li>
+          <li><a href="/contact">Contact</a></li>
         </ul>
       </div>
     </nav>
