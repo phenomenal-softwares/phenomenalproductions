@@ -100,9 +100,9 @@ export default function AboutPage() {
       >
         <h2>The Future We See</h2>
         <p>
-          We&aposre not just making apps and websites. We&aposre building tools for
+          We’re not just making apps and websites. We’re building tools for
           people to live better, work smarter, and reach farther — using tech
-          that&aposs powerful yet simple.
+          that’s powerful yet simple.
         </p>
       </motion.section>
 
@@ -120,7 +120,7 @@ export default function AboutPage() {
         <h3>
           Have an idea?{" "}
           <Link href="/client-form" className={styles.ctaLink}>
-            Let&aposs build it together.
+            Let’s build it together.
           </Link>
         </h3>
       </motion.section>

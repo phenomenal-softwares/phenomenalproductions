@@ -15,7 +15,7 @@ export default function CTASection() {
       viewport={{ once: true }}
     >
       <h2>Ready to Take the Next Step?</h2>
-      <p>Whether you&aposre here to explore or to build — we&aposve got you covered.</p>
+      <p>Whether you’re here to explore or to build — we’ve got you covered.</p>
 
       <div className={styles.buttonGroup}>
         {/* View Product or Download */}
@@ -45,7 +45,7 @@ export default function CTASection() {
           <p>Want to build something like this?</p>
           <Link href="/client-form" className={styles.ctaBtn}>
             <FaCode className={styles.icon} />
-            Let&aposs Work Together
+            Let’s Work Together
           </Link>
         </motion.div>
       </div>

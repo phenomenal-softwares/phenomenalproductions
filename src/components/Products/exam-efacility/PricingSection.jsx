@@ -42,9 +42,9 @@ export default function PricingSection() {
         >
           <h2>Tailored Pricing Just for You!</h2>
           <p>
-            Every client is unique — so is every project. Whether you&aposre a
+            Every client is unique — so is every project. Whether you’re a
             school, training institute, or business, we craft solutions that
-            match your exact needs. Let&aposs discuss your goals and design a
+            match your exact needs. Let’s discuss your goals and design a
             package that fits perfectly.
           </p>
 

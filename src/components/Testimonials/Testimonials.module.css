@@ -1,0 +1,136 @@
+.hero {
+  padding: 6rem 2rem;
+  text-align: center;
+  background: linear-gradient(to right, #f7f7ff, #eef0fc);
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heroContent .title {
+  font-size: 2.5rem;
+  color: #2c2c51;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.gridSection {
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #f9f9ff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.avatar {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c2c51;
+  margin-bottom: 0.2rem;
+}
+
+.title {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+.message {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.featuredQuote {
+  background: #f5f7ff;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.featuredQuote blockquote {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: #2c2c51;
+  font-style: italic;
+  position: relative;
+}
+
+.featuredQuote footer {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #666;
+  font-style: normal;
+}
+
+.testimonialCTA {
+  background-color: #262626;
+  color: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.ctaContent {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.ctaContent h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.ctaContent p {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  color: #ccc;
+}
+
+.ctaBtn {
+  background-color: #5e3bea;
+  color: #fff;
+  padding: 0.9rem 2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.ctaBtn:hover {
+  background-color: #4324c4;
+}

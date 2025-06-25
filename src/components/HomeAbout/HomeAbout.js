@@ -30,7 +30,7 @@ export default function HomeAbout() {
             building powerful technology that works for everyone.
           </p>
           <p className={styles.slogan}>
-            Preeminence is not just our motto — it&aposs our mindset.
+            Preeminence is not just our motto — it’s our mindset.
           </p>
           <Link href="/about" className={styles.readMoreBtn}>
             Learn More

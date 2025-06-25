@@ -1,0 +1,28 @@
+.heroSection {
+  width: 100%;
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #3f0071, #6a0572);
+  padding: 4rem 2rem;
+  color: #fff;
+  text-align: center;
+}
+
+.content {
+  max-width: 800px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #e0d3f5;
+}
