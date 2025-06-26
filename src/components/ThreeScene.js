@@ -55,7 +55,7 @@ export default function ThreeScene() {
     colorfulGroup = new THREE.Group();
     scene.add(colorfulGroup);
 
-    const colors = [0xffd700, 0x00ff00, 0xffffff, 0xE5E5E5]; // gold, green, white, black
+    const colors = [0xffe3b3, 0x028174, 0xffffff, 0x92de8b];
 
     for (let i = 0; i < 20; i++) {
       const geometry = new THREE.SphereGeometry(

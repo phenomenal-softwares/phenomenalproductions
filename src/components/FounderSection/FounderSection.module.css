@@ -1,12 +1,12 @@
 .founderSection {
   padding: 4rem 2rem;
-  background-color: #f9f9f9;
+  background-color: #e6fdf7; /* Soft Kiwi teal background */
 }
 
 .founderSection h2 {
   font-size: 2rem;
   text-align: center;
-  color: #4a148c;
+  color: #028174; /* Kiwi main green */
   margin-bottom: 1rem;
 }
 
@@ -27,7 +27,9 @@
 .founderImage {
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid green;
+  border: 4px solid #028174; /* Kiwi green border */
+  width: 200px;
+  height: 200px;
 }
 
 .founderBio {
@@ -38,10 +40,11 @@
 .founderBio h3 {
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
+  color: #0a6b8b;
 }
 
 .founderBio .title {
-  color: #666;
+  color: #0a6b8b;
   font-style: italic;
   margin-bottom: 1rem;
 }
@@ -50,24 +53,25 @@
   margin-bottom: 1.2rem;
   font-size: 1rem;
   line-height: 1.6;
+  color: #333;
 }
 
 .portfolioBtn {
-  background-color: gold;
-  color: black;
+  background-color: #ffe3b3; /* Kiwi cream */
+  color: #028174;
   padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 30px;
   font-weight: bold;
   text-decoration: none;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
   display: inline-block;
   margin-top: 1rem;
 }
 
 .portfolioBtn:hover {
-  background-color: black;
-  color: white;
+  background-color: #028174;
+  color: #fff;
 }
 
 .socialLinks {
@@ -79,14 +83,39 @@
 }
 
 .socialLinks a {
-  color: #333;
+  color: #0a6b8b;
   transition: color 0.3s ease;
 }
 
 .socialLinks a:hover {
-  color: #6c63ff; /* or brand color */
+  color: #028174;
 }
 
 .xIcon {
   display: block;
+}
+
+/* === Mobile Styles === */
+@media (max-width: 768px) {
+  .founderSection {
+    padding: 3rem 1.5rem;
+  }
+
+  .founderImage {
+    width: 150px;
+    height: 150px;
+  }
+
+  .founderBio h3 {
+    font-size: 1.5rem;
+  }
+
+  .bioText {
+    font-size: 0.95rem;
+  }
+
+  .socialLinks {
+    font-size: 1.4rem;
+    gap: 1rem;
+  }
 }

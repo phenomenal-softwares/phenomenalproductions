@@ -8,14 +8,14 @@
   text-align: center;
   font-size: 3rem;
   margin-bottom: 1rem;
-  color: #333;
+  color: #028174; /* Kiwi green */
 }
 
 .subtitle {
   text-align: center;
   font-size: 1.2rem;
   margin-bottom: 3rem;
-  color: #666;
+  color: #0a6b8b; /* Kiwi blue */
 }
 
 .grid {
@@ -25,16 +25,16 @@
 }
 
 .card {
-  background: white;
+  background: #ffffff;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px rgba(0, 129, 116, 0.1); /* light green tint */
   cursor: pointer;
   transition: box-shadow 0.3s ease;
 }
 
 .card:hover {
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 15px 30px rgba(0, 129, 116, 0.2); /* stronger on hover */
 }
 
 .image {
@@ -50,11 +50,35 @@
 .cardContent h3 {
   margin: 0 0 0.5rem 0;
   font-size: 1.3rem;
-  color: #222;
+  color: #028174; /* Kiwi green */
 }
 
 .cardContent p {
   margin: 0;
   font-size: 0.95rem;
-  color: #555;
+  color: #0a6b8b; /* Kiwi blue */
+}
+
+/* === Mobile adjustments === */
+@media (max-width: 600px) {
+  .main {
+    padding: 2rem 1rem;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .cardContent h3 {
+    font-size: 1.15rem;
+  }
+
+  .cardContent p {
+    font-size: 0.9rem;
+  }
 }

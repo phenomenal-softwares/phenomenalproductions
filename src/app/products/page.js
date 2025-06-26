@@ -26,7 +26,8 @@ export default function ProductsPage() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3 }}
       >
-        Explore our powerful and user-friendly tools built to help businesses, schools, and everyday users thrive in the digital world.
+        Explore our powerful and user-friendly tools built to help businesses,
+        schools, and everyday users thrive in the digital world.
       </motion.p>
 
       <div className={styles.grid}>

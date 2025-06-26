@@ -4,7 +4,7 @@ import styles from "./HomeAbout.module.css";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import eagleLogo from "../../../public/logo.png";
+import eagleLogo from "../../../public/images/logo2.png";
 
 export default function HomeAbout() {
   return (
@@ -26,7 +26,7 @@ export default function HomeAbout() {
           <p>
             At <strong>Phenomenal Productions</strong>, we believe in standing
             out — in doing work that commands attention and earns respect. With
-            the eagle as our symbol, we embody vision, speed, and strength —
+            the eagle as our symbol, we embody preeminence in flight, vision, and strength —
             building powerful technology that works for everyone.
           </p>
           <p className={styles.slogan}>

@@ -1,5 +1,12 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
 .formWrapper {
-  background: #fff;
+  background: linear-gradient(135deg, #f0f8ff, #e0f7fa);
   padding: 3rem;
   max-width: 800px;
   margin: 3rem auto;
@@ -12,13 +19,35 @@
   font-size: 2rem;
   text-align: center;
   margin-bottom: 0.5rem;
-  color: #222;
+  color: #028174; /* Kiwi green */
 }
 
 .subtext {
   text-align: center;
   margin-bottom: 2rem;
+  color: #0a6b8b; /* Kiwi blue */
+}
+
+.stepIndicator {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
   color: #666;
+  font-size: 1rem;
+}
+
+.progressBarWrapper {
+  height: 6px;
+  background: #eee;
+  border-radius: 4px;
+  margin: 1rem 0 2rem;
+  overflow: hidden;
+}
+
+.progressBar {
+  height: 100%;
+  background: linear-gradient(90deg, #028174, #0a6b8b);
+  transition: width 0.3s ease-in-out;
 }
 
 .navBtns {
@@ -29,7 +58,7 @@
 }
 
 .navBtns button {
-  background-color: blueviolet;
+  background-color: #028174; /* Kiwi primary */
   color: white;
   padding: 0.8rem 1.5rem;
   border: none;
@@ -40,7 +69,7 @@
 }
 
 .navBtns button:hover:not(:disabled) {
-  background-color: indigo;
+  background-color: #0a6b8b; /* darker Kiwi blue */
 }
 
 .navBtns button:disabled {
@@ -64,7 +93,7 @@
 .input:focus,
 .select:focus,
 .textarea:focus {
-  border-color: blueviolet;
+  border-color: #028174;
   outline: none;
 }
 
@@ -72,7 +101,7 @@
   font-weight: 600;
   margin-bottom: 0.4rem;
   display: block;
-  color: #333;
+  color: #028174;
 }
 
 .error {
@@ -88,7 +117,7 @@
   padding: 2rem;
   background: white;
   border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 0 20px rgba(0, 129, 116, 0.07); /* green glow */
 }
 
 .stepHeading {
@@ -96,25 +125,29 @@
   font-size: 2rem;
   margin-bottom: 1rem;
   font-weight: 600;
-  color: #333;
+  color: #028174;
 }
 
 .stepDescription {
   text-align: center;
   font-size: 1rem;
-  color: #666;
+  color: #0a6b8b;
   margin-bottom: 2rem;
 }
 
 .button {
   padding: 0.75rem 1.5rem;
   border: none;
-  background: blueviolet;
+  background: #028174;
   color: white;
   border-radius: 6px;
   font-weight: 600;
   cursor: pointer;
   transition: background 0.3s ease;
+}
+
+.button:hover {
+  background: #0a6b8b;
 }
 
 .button:disabled {
@@ -136,7 +169,7 @@
 
 /* step 3 */
 .reviewBox {
-  background-color: #f9f9f9;
+  background-color: #ffe3b3; /* light Kiwi orange background */
   border-radius: 10px;
   padding: 1.5rem;
   margin-top: 1rem;
@@ -147,7 +180,7 @@
 .reviewBox h3 {
   margin-top: 1rem;
   margin-bottom: 0.5rem;
-  color: #333;
+  color: #028174;
 }
 
 .checkboxContainer {
@@ -164,6 +197,73 @@
 
 .checkboxContainer label {
   font-size: 0.95rem;
-  color: #444;
+  color: #0a6b8b;
   line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .formWrapper {
+    width: 98vw;
+    padding: 2rem 1rem;
+  }
+
+  .heading {
+    font-size: 1.6rem;
+  }
+
+  .subtext {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .formContainer {
+    padding: 1.5rem 1rem;
+  }
+
+  .stepHeading {
+    font-size: 1.5rem;
+  }
+
+  .stepDescription {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .input,
+  .select,
+  .textarea {
+    padding: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .navBtns {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .navBtns button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  .reviewBox {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .checkboxContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .checkboxContainer label {
+    font-size: 0.9rem;
+  }
+
+  .button {
+    width: 100%;
+    font-size: 1rem;
+  }
 }

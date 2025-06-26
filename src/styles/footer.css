@@ -1,6 +1,6 @@
 .footer {
-  background-color: var(--black);
-  color: var(--white);
+  background-color: #028174; /* Deep Kiwi green */
+  color: #ffe3b3; /* Cream text */
   padding: 2rem 1rem;
   text-align: center;
 }
@@ -12,7 +12,7 @@
 
 .footer-title {
   font-size: 1.2rem;
-  color: var(--gold);
+  color: #92de8b; /* Light Kiwi green */
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
@@ -20,10 +20,25 @@
 .footer-text {
   font-size: 0.95rem;
   margin-bottom: 0.5rem;
-  color: var(--white);
+  color: #ffe3b3; /* Cream text */
 }
 
 .footer-copy {
   font-size: 0.85rem;
-  color: #cccccc;
+  color: #d4f2cc; /* Soft minty gray for contrast */
+}
+
+/* === MOBILE STYLING === */
+@media (max-width: 768px) {
+  .footer-title {
+    font-size: 1rem;
+  }
+
+  .footer-text {
+    font-size: 0.85rem;
+  }
+
+  .footer-copy {
+    font-size: 0.75rem;
+  }
 }

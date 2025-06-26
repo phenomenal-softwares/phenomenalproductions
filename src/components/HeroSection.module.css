@@ -1,7 +1,7 @@
 .heroWrapper {
   position: relative;
   width: 100%;
-  height: 100vh; /* Full screen height under Navbar */
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -29,12 +29,13 @@
   line-height: 1.4;
   color: white;
   text-shadow: 1px 1px 4px black;
+  font-family: monospace;
   font-weight: bold;
   pointer-events: auto;
 }
 
 .cursor {
-  color: gold;
+  color: #ffe3b3;
   font-weight: bold;
   animation: blink 1s step-end infinite;
 }
@@ -45,43 +46,51 @@
   }
 }
 
-.ctaButton {
-  margin-top: 1.5rem;
-  padding: 0.75rem 2rem;
-  font-size: 1rem;
-  background-color: gold;
-  color: black;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
+.ctaButtonGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  flex-direction: row;
   pointer-events: auto;
-  transition: background 0.3s ease;
+  z-index: 20;
+}
+
+.ctaButton,
+.scrollBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.ctaButton {
+  background-color: #028174;
+  color: #ffe3b3;
 }
 
 .ctaButton:hover {
-  background-color: #daa520;
+  background-color: #0a6b8b;
+  color: #92de8b;
 }
 
 .scrollBtn {
-  position: fixed;
-  bottom: 40px; /* distance from bottom of screen */
-  right: 40px; /* distance from right edge */
-  background-color: gold;
-  color: black;
-  font-weight: bold;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  pointer-events: auto;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-  z-index: 99;
+  background-color: #ffe3b3;
+  color: #028174;
 }
 
 .scrollBtn:hover {
-  background-color: black;
-  color: white;
+  background-color: #92de8b;
+  color: #0a6b8b;
 }
 
 @media (max-width: 768px) {
@@ -90,14 +99,7 @@
     max-width: 300px;
   }
 
-  .ctaButton {
-    font-size: 0.9rem;
-    padding: 0.8rem 1.5rem;
-  }
-
-  .scrollBtn {
-    bottom: 20px;
-    right: 20px;
-    padding: 0.6rem 1.2rem;
+  .ctaButtonGroup {
+    flex-direction: column;
   }
 }

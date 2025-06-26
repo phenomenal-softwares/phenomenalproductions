@@ -6,8 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 import FounderSection from "@/components/FounderSection/FounderSection";
-import eagleLogo from "../../../public/logo.png";
-import { FaEye, FaBolt, FaGlobeAfrica } from "react-icons/fa";
+import eagleLogo from "../../../public/images/logo2.png";
+import { FaEye, FaBolt, FaGlobeAfrica} from "react-icons/fa";
 
 // Animation variant
 const fadeInUp = {
@@ -46,7 +46,8 @@ export default function AboutPage() {
         <p>
           We exist to create solutions that are bold, reliable, accessible, and
           transformative. Like the eagle, we rise above the noise, choosing
-          excellence over convenience and vision over trends.
+          excellence over convenience and vision over trends. We believe that
+          anyone can fly high and stand out with the right tools and support.
         </p>
       </motion.section>
 
@@ -66,7 +67,7 @@ export default function AboutPage() {
           </li>
           <li>
             <FaBolt className={styles.icon} />
-            <span>Speed & Precision</span>
+            <span>Speed & Integrity</span>
           </li>
           <li>
             <FaGlobeAfrica className={styles.icon} />
@@ -101,8 +102,9 @@ export default function AboutPage() {
         <h2>The Future We See</h2>
         <p>
           We’re not just making apps and websites. We’re building tools for
-          people to live better, work smarter, and reach farther — using tech
-          that’s powerful yet simple.
+          people to live better, work smarter, and reach farther, making them
+          stand out in their fields — using tech that’s powerful yet simple and
+          accessible.
         </p>
       </motion.section>
 

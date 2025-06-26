@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import styles from "./FormWizard.module.css";
 import StepOne from "./steps/StepOne";
 import StepTwo from "./steps/StepTwo";
@@ -86,40 +87,87 @@ export default function FormWizard() {
   };
 
   return (
-    <div className={styles.formWrapper}>
-      <h2 className={styles.heading}>Let’s Build Something Amazing</h2>
-      <p className={styles.subtext}>
-        Fill the form to get started. We’re excited to work with you!
-      </p>
+    <div className={styles.container}>
+      <div className={styles.formWrapper}>
+        <h2 className={styles.heading}>Let’s Build Something Amazing</h2>
+        <p className={styles.subtext}>
+          Fill the form to get started. We’re excited to work with you!
+        </p>
 
-      {step === 1 && (
-        <StepOne data={formData} onChange={handleChange} errors={errors} />
-      )}
-      {step === 2 && (
-        <StepTwo data={formData} onChange={handleChange} errors={errors} />
-      )}
-      {step === 3 && (
-        <StepThree data={formData} onChange={handleChange} errors={errors} />
-      )}
+        <p className={styles.stepIndicator}>
+          Step {step} of {TOTAL_STEPS}
+        </p>
 
-      <div className={styles.navBtns}>
-        <button onClick={handlePrev} disabled={step === 1}>
-          Prev
-        </button>
-        {step < TOTAL_STEPS ? (
-          <button onClick={handleNext}>Next</button>
-        ) : (
-          <button onClick={handleSubmit} disabled={isSubmitting}>
-            {isSubmitting ? "Submitting..." : "Submit"}
+        <AnimatePresence mode="wait">
+          {step === 1 && (
+            <motion.div
+              key="step1"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.4 }}
+            >
+              <StepOne
+                data={formData}
+                onChange={handleChange}
+                errors={errors}
+              />
+            </motion.div>
+          )}
+          {step === 2 && (
+            <motion.div
+              key="step2"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.4 }}
+            >
+              <StepTwo
+                data={formData}
+                onChange={handleChange}
+                errors={errors}
+              />
+            </motion.div>
+          )}
+          {step === 3 && (
+            <motion.div
+              key="step3"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.4 }}
+            >
+              <StepThree
+                data={formData}
+                onChange={handleChange}
+                errors={errors}
+              />
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        <div className={styles.progressBarWrapper}>
+          <div
+            className={styles.progressBar}
+            style={{ width: `${(step / TOTAL_STEPS) * 100}%` }}
+          />
+        </div>
+
+        <div className={styles.navBtns}>
+          <button onClick={handlePrev} disabled={step === 1}>
+            Prev
           </button>
-        )}
-      </div>
+          {step < TOTAL_STEPS ? (
+            <button onClick={handleNext}>Next</button>
+          ) : (
+            <button onClick={handleSubmit} disabled={isSubmitting}>
+              {isSubmitting ? "Submitting..." : "Submit"}
+            </button>
+          )}
+        </div>
 
-      {showModal && (
-        <SuccessModal
-          clientName={formData.firstName}
-        />
-      )}
+        {showModal && <SuccessModal clientName={formData.firstName} />}
+      </div>
     </div>
   );
 }

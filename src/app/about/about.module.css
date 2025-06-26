@@ -1,6 +1,6 @@
 .aboutMain {
   font-family: sans-serif;
-  color: #222;
+  color: #0a6b8b; /* Kiwi Deep Blue for general text */
 }
 
 .hero {
@@ -28,21 +28,22 @@
 }
 
 .sectionAlt {
-  background-color: #f2f2f2;
+  background-color: #d6f9d4; /* Soft Kiwi green background */
+  margin-bottom: 1.5rem;
 }
 
 .section h2,
 .sectionAlt h2 {
   font-size: 2rem;
   text-align: center;
-  color: #4a148c;
+  color: #028174; /* Kiwi main green */
   margin-bottom: 1rem;
 }
 
 .section p {
   font-size: 1.1rem;
   line-height: 1.7;
-  color: #444;
+  color: #0a6b8b;
 }
 
 .iconList {
@@ -59,32 +60,68 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 150px;
+  max-width: 200px;
   font-weight: bold;
-  color: #333;
+  color: #028174;
 }
 
 .icon {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
-  color: goldenrod;
+  color: #92de8b; /* Soft Kiwi green for icon */
 }
 
 .cta {
   padding: 3rem 1.5rem;
   text-align: center;
-  background-color: gold;
-  color: #111;
+  background-color: #ffe3b3; /* Kiwi cream */
+  color: #028174;
   font-weight: bold;
   font-size: 1.3rem;
 }
 
 .ctaLink {
-  color: #535553;
+  color: #0a6b8b;
   text-decoration: underline;
   font-weight: bold;
 }
 
 .ctaLink:hover {
-  color: #069a46;
+  color: #028174;
+}
+
+/* === Mobile Tweaks === */
+@media (max-width: 768px) {
+  .hero {
+    height: 40vh;
+    padding: 2rem 1rem;
+  }
+
+  .section,
+  .sectionAlt {
+    padding: 2.5rem 1rem;
+  }
+
+  .section h2,
+  .sectionAlt h2 {
+    font-size: 1.6rem;
+  }
+
+  .section p {
+    font-size: 1rem;
+  }
+
+  .iconList {
+    gap: 1.2rem;
+  }
+
+  .iconList li {
+    max-width: 120px;
+    font-size: 0.95rem;
+  }
+
+  .cta {
+    font-size: 1.1rem;
+    padding: 2rem 1rem;
+  }
 }

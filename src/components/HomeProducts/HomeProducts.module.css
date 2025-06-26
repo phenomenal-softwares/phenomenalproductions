@@ -1,11 +1,15 @@
 .productsSection {
   padding: 60px 20px;
-  background: #f7f7f7;
+  background: #ffffff;
   text-align: center;
 }
 
 .headerSection {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .left {
@@ -24,7 +28,7 @@
 
 .heading h2 {
   font-size: 2.5rem;
-  color: #4b0082;
+  color: #028174; /* Dark Teal */
   margin-bottom: 10px;
 }
 
@@ -32,7 +36,7 @@
   max-width: 700px;
   margin: 0 auto 40px;
   font-size: 1.5rem;
-  color: #333;
+  color: #0a6b8b; /* Blue-Teal */
 }
 
 .content {
@@ -74,8 +78,8 @@
 }
 
 .ctaBtn {
-  background-color: #4b0082;
-  color: #fff;
+  background-color: #028174; /* Kiwi Dark Teal */
+  color: #ffe3b3; /* Kiwi Light Cream */
   padding: 14px 28px;
   font-size: 1rem;
   border-radius: 8px;
@@ -84,5 +88,37 @@
 }
 
 .ctaBtn:hover {
-  background-color: #360063;
+  background-color: #0a6b8b;
+  color: #fff;
+}
+
+/* ===== MOBILE STYLES ===== */
+@media (max-width: 768px) {
+  .headerSection {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .heading h2 {
+    font-size: 2rem;
+  }
+
+  .heading p {
+    font-size: 1.1rem;
+    padding: 0 10px;
+  }
+
+  .ctaBtn {
+    width: 90%;
+    font-size: 0.95rem;
+    padding: 12px 20px;
+  }
+
+  .slide {
+    width: 160px;
+  }
+
+  .content {
+    padding: 1rem;
+  }
 }

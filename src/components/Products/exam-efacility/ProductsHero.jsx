@@ -26,13 +26,13 @@ export default function ProductsHero() {
           transition={{ duration: 1.2 }}
         >
           <Image
-            src="/images/hero-app.png"
+            src="/products/exam-efacility/hero-device.png"
             alt="App Showcase"
-            width={280}
-            height={500}
+            width={300}
+            height={450}
             className={styles.image}
             placeholder="blur"
-            blurDataURL="/images/hero-app.png"
+            blurDataURL="/products/exam-efacility/hero-device.png"
           />
         </motion.div>
         <motion.div

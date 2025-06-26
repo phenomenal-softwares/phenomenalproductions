@@ -1,8 +1,6 @@
-/* components/HomeAbout.module.css */
-
 .aboutSection {
   padding: 4rem 2rem;
-  background-color: #f9f9f9;
+  background-color: #92de8b; /* Kiwi Light Green */
   text-align: center;
 }
 
@@ -12,6 +10,7 @@
   align-items: flex-start;
   gap: 2rem;
   margin: 0 auto;
+  max-width: 1100px;
 }
 
 .headingRow {
@@ -29,25 +28,29 @@
 .eagleLogo {
   width: 300px;
   height: 300px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  object-fit: contain;
+  padding: 0.5rem;
 }
 
 .headingRow h2 {
   font-size: 2rem;
   font-weight: bold;
   margin: 0;
-  color: #333;
+  color: #028174; /* Dark Teal */
 }
 
 .aboutContent p {
   font-size: 1.1rem;
-  color: #444;
+  color: #0a6b8b; /* Blue-Teal */
   margin: 1rem 0;
   line-height: 1.6;
 }
 
 .slogan {
   font-style: italic;
-  color: #6a1b9a;
+  color: #028174; /* Dark Teal */
   margin-top: 1.5rem;
 }
 
@@ -55,8 +58,8 @@
   display: inline-block;
   margin-top: 2rem;
   padding: 0.75rem 1.5rem;
-  background-color: gold;
-  color: black;
+  background-color: #ffe3b3; /* Kiwi Gold */
+  color: #028174;
   text-decoration: none;
   font-weight: bold;
   border-radius: 30px;
@@ -64,6 +67,34 @@
 }
 
 .readMoreBtn:hover {
-  background-color: black;
-  color: white;
+  background-color: #028174;
+  color: #ffe3b3;
+}
+
+/* ===== MOBILE STYLES ===== */
+@media (max-width: 768px) {
+  .aboutContent {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .eagleLogo {
+    width: 200px;
+    height: 200px;
+  }
+
+  .headingRow h2 {
+    font-size: 1.5rem;
+  }
+
+  .aboutContent p {
+    font-size: 1rem;
+  }
+
+  .readMoreBtn {
+    width: 80%;
+    padding: 0.7rem 1rem;
+    font-size: 0.95rem;
+  }
 }

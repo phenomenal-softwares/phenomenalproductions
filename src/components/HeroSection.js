@@ -2,7 +2,9 @@
 
 import React, { useState, useEffect } from "react";
 import ThreeScene from "./ThreeScene";
-import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { FaChevronDown, FaCode } from "react-icons/fa";
+import Link from "next/link";
 import styles from "./HeroSection.module.css";
 
 const quotes = [
@@ -17,7 +19,25 @@ export default function HeroSection() {
   const [quoteIndex, setQuoteIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const [showTop, setShowTop] = useState(false);
+
+  const containerVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+        when: "beforeChildren",
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
 
   useEffect(() => {
     const currentQuote = quotes[quoteIndex];
@@ -44,26 +64,11 @@ export default function HeroSection() {
     return () => clearTimeout(timer);
   }, [charIndex, isDeleting, quoteIndex]);
 
-  // Toggle button behavior based on scroll position
-  useEffect(() => {
-    const handleScroll = () => {
-      const threshold = window.innerHeight * 0.6;
-      setShowTop(window.scrollY > threshold);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   const scrollToNextSection = () => {
     const about = document.getElementById("about");
     if (about) {
       about.scrollIntoView({ behavior: "smooth" });
     }
-  };
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -74,27 +79,28 @@ export default function HeroSection() {
           {displayedText}
           <span className={styles.cursor}>|</span>
         </h1>
-        <button
-          className={styles.ctaButton}
+        <motion.div
+          className={styles.ctaButtonGroup}
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
         >
-          Create Your Website or App
-        </button>
-        <button
-          className={styles.scrollBtn}
-          onClick={showTop ? scrollToTop : scrollToNextSection}
-        >
-          {showTop ? (
-            <>
-              <FaChevronUp style={{ marginRight: 8 }} />
-              Back to Top
-            </>
-          ) : (
-            <>
-              <FaChevronDown style={{ marginRight: 8 }} />
-              Scroll Down
-            </>
-          )}
-        </button>
+          <motion.button className={styles.ctaButton} variants={itemVariants}>
+            <Link href="/contact" style={{ color: "inherit", textDecoration: "none" }}>
+            <FaCode style={{ marginRight: 8 }} />
+            Create Your Website or App
+            </Link>
+          </motion.button>
+
+          <motion.button
+            className={styles.scrollBtn}
+            onClick={scrollToNextSection}
+            variants={itemVariants}
+          >
+            <FaChevronDown style={{ marginRight: 8 }} />
+            Scroll Down
+          </motion.button>
+        </motion.div>
       </div>
     </div>
   );

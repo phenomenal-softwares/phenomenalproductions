@@ -34,7 +34,7 @@ export default function FounderSection() {
         </div>
 
         <div className={styles.founderBio}>
-          <h3>Abiodun Ojo</h3>
+          <h3>Abiodun Joseph Obaloluwa Ojo</h3>
           <p className={styles.title}>Software Developer & Tech Entrepreneur</p>
           <p className={styles.bioText}>
             Abiodun is the visionary mind behind Phenomenal Productions. With a
