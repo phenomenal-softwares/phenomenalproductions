@@ -6,9 +6,9 @@ const products = [
     image: "/images/homeproducts/product1.jpg",
   },
   {
-    id: "ecommerce-solution",
-    name: "E-Commerce Solution",
-    description: "A seamless digital storefront with inventory, checkout, and analytics.",
+    id: "parables-of-jesus",
+    name: "Parables of Jesus",
+    description: "A Bible study app exploring the parables of Jesus with interactive features.",
     image: "/images/homeproducts/product2.jpg",
   },
   {
@@ -33,7 +33,7 @@ const products = [
     id: "booking-app",
     name: "Booking & Scheduling Tool",
     description: "Let customers book, cancel or reschedule online.",
-    image: "/images/homeproducts/product6.jpg",
+    image: "/images/homeproducts/product6.png",
   },
 ];
 

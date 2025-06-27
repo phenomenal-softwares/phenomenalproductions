@@ -7,6 +7,7 @@ import Link from "next/link";
 
 import FounderSection from "@/components/FounderSection/FounderSection";
 import eagleLogo from "../../../public/images/logo2.png";
+import phenomenalLogo from "../../../public/images/logo3.png";
 import { FaEye, FaBolt, FaGlobeAfrica} from "react-icons/fa";
 
 // Animation variant
@@ -29,8 +30,14 @@ export default function AboutPage() {
         <Image
           src={eagleLogo}
           alt="Eagle soaring"
-          fill
-          className={styles.bgImage}
+          width={350}
+          className={styles.logo}
+        />
+        <Image
+          src={phenomenalLogo}
+          alt="phenomenal"
+          width={350}
+          className={styles.logo}
         />
       </motion.section>
 

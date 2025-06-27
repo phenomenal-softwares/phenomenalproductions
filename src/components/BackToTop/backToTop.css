@@ -1,0 +1,19 @@
+.backToTop {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: rgba(2, 129, 116, 0.5); /* Kiwi main */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 0.85rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.backToTop:hover {
+  background-color: #0a6b8b; /* Kiwi dark */
+}

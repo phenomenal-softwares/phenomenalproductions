@@ -11,7 +11,8 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
 
-  const isActive = (path) => pathname === path;
+  const isActive = (path) =>
+    pathname === path || pathname.startsWith(`${path}/`);
 
   const menuVariants = {
     hidden: { opacity: 0, y: -10 },

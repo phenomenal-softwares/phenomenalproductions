@@ -1,10 +1,11 @@
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import '@/app/globals.css';
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import BackToTop from "@/components/BackToTop/BackToTop";
+import "@/app/globals.css";
 
 export const metadata = {
-  title: 'Phenomenal Productions',
-  description: 'We build top-tier apps for ambitious brands.',
+  title: "Phenomenal Productions",
+  description: "We build top-tier apps for ambitious brands.",
 };
 
 export default function RootLayout({ children }) {
@@ -15,9 +16,10 @@ export default function RootLayout({ children }) {
           <header>
             <Navbar />
           </header>
-
-          <main>{children}</main>
-
+          <main>
+            {children}
+            <BackToTop />
+          </main>
           <footer>
             <Footer />
           </footer>
