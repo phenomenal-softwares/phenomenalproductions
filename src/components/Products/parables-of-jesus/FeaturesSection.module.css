@@ -7,7 +7,7 @@
 .featuresSection h2 {
   font-size: 2.5rem;
   margin-bottom: 3rem;
-  color: #4b0082;
+  color: #2028c9;
 }
 
 .grid {
@@ -30,7 +30,7 @@
 
 .icon {
   font-size: 2.5rem;
-  color: blueviolet;
+  color: rgb(43, 89, 226);
   margin-bottom: 1rem;
 }
 
@@ -41,7 +41,7 @@
 
 .card p {
   font-size: 0.95rem;
-  color: #555;
+  color: #104dde;
 }
 
 @media (max-width: 768px) {
