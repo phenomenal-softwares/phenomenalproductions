@@ -14,6 +14,11 @@ import product3 from "../../../public/images/homeproducts/product3.jpg";
 import product4 from "../../../public/images/homeproducts/product4.jpg";
 import product5 from "../../../public/images/homeproducts/product5.jpg";
 import product6 from "../../../public/images/homeproducts/product6.png";
+import product7 from "../../../public/images/homeproducts/product7.jpg";
+import product8 from "../../../public/images/homeproducts/product8.jpg";
+import product9 from "../../../public/images/homeproducts/product9.jpg";
+import product10 from "../../../public/images/homeproducts/product10.jpg";
+import product11 from "../../../public/images/homeproducts/product11.jpg";
 
 // Store product images in a variable
 const images = [
@@ -23,6 +28,11 @@ const images = [
   product4,
   product5,
   product6,
+  product7,
+  product8,
+  product9,
+  product10,
+  product11,
 ];
 
 export default function HomeProducts() {

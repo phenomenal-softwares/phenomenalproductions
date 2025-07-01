@@ -26,7 +26,7 @@ export default function CTASection() {
         >
           <p>Check out the live version</p>
           <a
-            href="https://motiv8-ten.vercel.app"
+            href="https://phenomenal-softwares.github.io/abbeycal/"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.ctaBtn}

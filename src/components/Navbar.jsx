@@ -37,8 +37,7 @@ export default function Navbar() {
     { href: "/about", label: "About" },
     { href: "/products", label: "Products" },
     { href: "/client-form", label: "Create App" },
-    { href: "/contact", label: "Contact" },
-    { href: "/testimonials", label: "Testimonials" },
+    { href: "/contact", label: "Contact" }
   ];
 
   return (

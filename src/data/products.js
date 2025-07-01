@@ -59,6 +59,12 @@ const products = [
     description: "Get random quotes from diverse authors across diverse categories.",
     image: "/images/homeproducts/product10.jpg",
   },
+  {
+    id: "abbeycal",
+    name: "AbbeyCal: Scientific Calculator",
+    description: "Perform basic and scientific calculations. Experience sleek neomorphism interface.",
+    image: "/images/homeproducts/product11.jpg",
+  },
 ];
 
 export default products;

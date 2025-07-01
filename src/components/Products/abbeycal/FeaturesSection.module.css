@@ -1,13 +1,13 @@
 .featuresSection {
   padding: 4rem 2rem;
   text-align: center;
-  background-color: #eff5f0;
+  background-color: #dcdcdc;
 }
 
 .featuresSection h2 {
   font-size: 2.5rem;
   margin-bottom: 3rem;
-  color: #4cb051;
+  color: #2e2e2e;
 }
 
 .grid {
@@ -17,7 +17,7 @@
 }
 
 .card {
-  background: #e8eee9;
+  background: #bebebe;
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
@@ -30,19 +30,19 @@
 
 .icon {
   font-size: 2.5rem;
-  color: #4cb051;
+  color: #2e2e2e;
   margin-bottom: 1rem;
 }
 
 .card h3 {
   margin: 0.5rem 0;
   font-size: 1.25rem;
-  color: #4cb051;
+  color: #2e2e2e;
 }
 
 .card p {
   font-size: 0.95rem;
-  color: #4cb051;
+  color: #2e2e2e;
 }
 
 @media (max-width: 768px) {

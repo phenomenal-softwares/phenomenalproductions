@@ -3,32 +3,38 @@
 import styles from "./FeaturesSection.module.css";
 import { motion } from "framer-motion";
 import {
-  FaQuoteRight,
-  FaLayerGroup,
-  FaHeart,
-  FaShareAlt,
+  FaCalculator,
+  FaClock,
+  FaSmile,
+  FaCloudSun,
+  FaMoon,
 } from "react-icons/fa";
 
 const features = [
   {
-    icon: <FaQuoteRight />,
-    title: "Inspiring Random Quotes",
-    desc: "Get powerful, thought-provoking quotes every time you refresh.",
+    icon: <FaCalculator />,
+    title: "Scientific Calculator",
+    desc: "Perform both simple and advanced mathematical operations with precision.",
   },
   {
-    icon: <FaLayerGroup />,
-    title: "Quote Categories",
-    desc: "Explore quotes by themes—motivation, love, wisdom, and more.",
+    icon: <FaClock />,
+    title: "Time & Date Display",
+    desc: "View real-time local time and date with ease.",
   },
   {
-    icon: <FaHeart />,
-    title: "Save Your Favorites",
-    desc: "Bookmark quotes that speak to you for easy access later.",
+    icon: <FaSmile />,
+    title: "Smart Greeting",
+    desc: "Dynamic greetings that change based on the time of day.",
   },
   {
-    icon: <FaShareAlt />,
-    title: "Share with Friends",
-    desc: "Easily share quotes across social media or messaging apps.",
+    icon: <FaCloudSun />,
+    title: "Neomorphism UI",
+    desc: "Modern soft-shadowed design that gives a tactile, elegant look.",
+  },
+  {
+    icon: <FaMoon />,
+    title: "Dark Mode Support",
+    desc: "Switch between light and dark themes effortlessly.",
   },
 ];
 

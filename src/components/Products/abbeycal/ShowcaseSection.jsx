@@ -6,9 +6,10 @@ import Image from "next/image";
 import { useState } from "react";
 
 const imagePaths = [
-  "/products/motiv8/shot1.jpg",
-  "/products/motiv8/shot2.jpg",
-  "/products/motiv8/shot3.jpg"
+  "/products/abbeycal/shot1.jpg",
+  "/products/abbeycal/shot2.jpg",
+  "/products/abbeycal/shot3.jpg",
+  "/products/abbeycal/shot4.jpg"
 ];
 
 export default function ShowcaseSection() {

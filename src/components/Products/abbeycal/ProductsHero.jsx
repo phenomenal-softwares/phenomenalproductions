@@ -4,14 +4,14 @@ import styles from "./ProductsHero.module.css";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { FaGlobe } from "react-icons/fa";
-import heroImg from "../../../../public/products/motiv8/hero-bg.jpg";
+import heroImg from "../../../../public/products/abbeycal/hero-bg.jpg";
 
 export default function ProductsHero() {
   return (
     <section className={styles.heroSection}>
       <Image
         src={heroImg}
-        alt="motiv8 Background"
+        alt="abbeycal Background"
         className={styles.bgImage}
         placeholder="blur"
         fill
@@ -26,13 +26,13 @@ export default function ProductsHero() {
           transition={{ duration: 1.2 }}
         >
           <Image
-            src="/products/motiv8/hero-device.jpg"
+            src="/products/abbeycal/hero-device.jpg"
             alt="App Showcase"
             width={230}
             height={480}
             className={styles.image}
             placeholder="blur"
-            blurDataURL="/products/motiv8/hero-device.jpg"
+            blurDataURL="/products/abbeycal/hero-device.jpg"
           />
         </motion.div>
         <motion.div
@@ -42,10 +42,12 @@ export default function ProductsHero() {
           transition={{ duration: 1, ease: "easeOut" }}
         >
           <h1 className={styles.title}>
-            Motiv8: <span className={styles.highlight}>Random Quotes</span>
+            AbbeyCal:{" "}
+            <span className={styles.highlight}>Scientific Calculator</span>
           </h1>
           <p className={styles.subtitle}>
-            Get random quotes from diverse authors across diverse categories. Add favorites to your collection and share them with friends.
+            Perform simple and complex calculations with ease using AbbeyCal, the
+            scientific calculator that combines functionality with a sleek neomorphism interface.
           </p>
 
           <motion.div
@@ -59,7 +61,7 @@ export default function ProductsHero() {
             }}
           >
             <a
-              href="https://motiv8-ten.vercel.app/"
+              href="https://phenomenal-softwares.github.io/abbeycal/"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.ctaButton}
