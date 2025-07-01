@@ -28,8 +28,8 @@ export default function ProductsHero() {
           <Image
             src="/products/castle-royal/hero-device.jpg"
             alt="App Showcase"
-            width={300}
-            height={450}
+            width={230}
+            height={480}
             className={styles.image}
             placeholder="blur"
             blurDataURL="/products/castle-royal/hero-device.jpg"

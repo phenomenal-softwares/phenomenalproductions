@@ -35,6 +35,30 @@ const products = [
     description: "A complete, modern, school site packed with magnificent features.",
     image: "/images/homeproducts/product6.png",
   },
+  {
+    id: "rhodes-organic",
+    name: "Rhodes Organic Essentials",
+    description: "An online shopping website with cool and natural interface.",
+    image: "/images/homeproducts/product7.jpg",
+  },
+  {
+    id: "foodyglot",
+    name: "FoodyGlot: Recipe Search",
+    description: "Search the recipes of all your favorite meals.",
+    image: "/images/homeproducts/product8.jpg",
+  },
+  {
+    id: "movii",
+    name: "Movii: Search Movies",
+    description: "Get all details about your favorite movies.",
+    image: "/images/homeproducts/product9.jpg",
+  },
+  {
+    id: "motiv8",
+    name: "Motiv8: Get Random Quotes",
+    description: "Get random quotes from diverse authors across diverse categories.",
+    image: "/images/homeproducts/product10.jpg",
+  },
 ];
 
 export default products;

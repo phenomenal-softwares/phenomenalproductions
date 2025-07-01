@@ -6,7 +6,7 @@ import ShowcaseSection from "@/components/Products/castle-royal/ShowcaseSection"
 import PricingSection from "@/components/Products/castle-royal/PricingSection";
 import CTASection from "@/components/Products/castle-royal/CTASection";
 
-export default function ExamEfacilityPage() {
+export default function CastleRoyalPage() {
   return (
     <main>
       <ProductsHero />
