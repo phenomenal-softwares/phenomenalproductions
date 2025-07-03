@@ -1,5 +1,3 @@
-"use client";
-
 import ProductsHero from "@/components/Products/abbeycal/ProductsHero";
 import FeaturesSection from "@/components/Products/abbeycal/FeaturesSection";
 import ShowcaseSection from "@/components/Products/abbeycal/ShowcaseSection";

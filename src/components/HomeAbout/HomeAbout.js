@@ -17,7 +17,11 @@ export default function HomeAbout() {
     >
       <div className={styles.aboutContent}>
         <div className={styles.logo}>
-          <Image src={eagleLogo} className={styles.eagleLogo} alt="Phenomenal Productions Logo" />
+          <Image
+            src={eagleLogo}
+            className={styles.eagleLogo}
+            alt="Phenomenal Productions Logo"
+          />
         </div>
         <div>
           <div className={styles.headingRow}>
@@ -26,11 +30,12 @@ export default function HomeAbout() {
           <p>
             At <strong>Phenomenal Productions</strong>, we believe in standing
             out — in doing work that commands attention and earns respect. With
-            the eagle as our symbol, we embody preeminence in flight, vision, and strength —
-            building powerful technology that works for everyone.
+            the eagle as our symbol, we embody preeminence in flight, vision,
+            and strength — building powerful technology that works for everyone.
           </p>
           <p className={styles.slogan}>
-            Preeminence is not just our motto — it’s our mindset.
+            We build digital products on the <strong>Web</strong> and Mobile (
+            <strong>Android</strong> + <strong>iOS</strong>) platforms!
           </p>
           <Link href="/about" className={styles.readMoreBtn}>
             Learn More

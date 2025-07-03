@@ -8,8 +8,9 @@ import Link from "next/link";
 import styles from "./HeroSection.module.css";
 
 const quotes = [
-  "Give global visibility to your brand with our softwares.",
-  "Build digital products that work as hard as you do.",
+  "Welcome to Phenomenal Productions... where we make you stand out.",
+  "We provide Web, Android, and iOS tech solutions",
+  "Build digital products that impact lives.",
   "Transform your vision into world-class platforms.",
   "Let your business speak on the web and beyond.",
 ];

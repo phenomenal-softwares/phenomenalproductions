@@ -47,6 +47,11 @@ export default function FounderSection() {
             make life easier, he brings clarity, speed, and precision — always
             with an eye on excellence.
           </p>
+          <p className={styles.bioText}>
+            Aside his dedication to the world of softwares, Abiodun is also a
+            Laboratory Technologist, Video Editor, Passionate Teacher,
+            Multilingual, and Guitarist. He is a lifelong learner and a lover of children.
+          </p>
 
           <a
             href="https://abiodunojo.vercel.app"

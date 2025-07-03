@@ -1,5 +1,3 @@
-"use client";
-
 import ProductsHero from "@/components/Products/priorify/ProductsHero";
 import FeaturesSection from "@/components/Products/priorify/FeaturesSection";
 import ShowcaseSection from "@/components/Products/priorify/ShowcaseSection";

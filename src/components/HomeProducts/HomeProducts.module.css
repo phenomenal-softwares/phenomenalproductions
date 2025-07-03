@@ -62,7 +62,7 @@
 
 .slide {
   flex: 0 0 auto;
-  width: 200px;
+  width: 300px;
   height: auto;
   object-fit: cover;
   border-radius: 10px;
@@ -115,10 +115,10 @@
   }
 
   .slide {
-    width: 160px;
+    width: 200px;
   }
 
   .content {
-    padding: 1rem;
+    padding: 0.3rem;
   }
 }

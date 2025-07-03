@@ -1,5 +1,3 @@
-"use client";
-
 import ProductsHero from "@/components/Products/movii/ProductsHero";
 import FeaturesSection from "@/components/Products/movii/FeaturesSection";
 import ShowcaseSection from "@/components/Products/movii/ShowcaseSection";

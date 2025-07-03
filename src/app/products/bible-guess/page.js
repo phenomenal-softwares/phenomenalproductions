@@ -1,5 +1,3 @@
-"use client";
-
 import ProductsHero from "@/components/Products/bible-guess/ProductsHero";
 import FeaturesSection from "@/components/Products/bible-guess/FeaturesSection";
 import ShowcaseSection from "@/components/Products/bible-guess/ShowcaseSection";

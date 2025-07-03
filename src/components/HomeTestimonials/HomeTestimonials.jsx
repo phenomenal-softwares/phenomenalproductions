@@ -7,32 +7,32 @@ const logos = [
   {
     src: "/testimonials/habsag.jpg",
     alt: "Habsag Studios",
-    link: "https://habsag.com", // replace with real link
+    link: "https://wa.me/2349073605341",
   },
   {
     src: "/testimonials/cornerstone.jpg",
     alt: "Cornerstone",
-    link: "https://cornerstone.com", // replace with real link
+    link: "https://www.instagram.com/_cornerstonecreativestudio?igsh=ZXJyMTJ2cXp4cXZw",
   },
   {
     src: "/testimonials/eruobami.jpg",
     alt: "Eruobami",
-    link: "https://eruobami.com", // replace with real link
+    link: "https://www.facebook.com/opeyemi.eruobami.1422",
   },
   {
     src: "/testimonials/arkoffire.jpg",
     alt: "Ark of Fire",
-    link: "https://arkoffire.com", // replace with real link
+    link: "https://www.facebook.com/afodanoah.adebayo",
   },
   {
     src: "/testimonials/winpay.jpg",
     alt: "Winpay",
-    link: "https://winpay.com", // replace with real link
+    link: "https://www.facebook.com/WinpayHQ",
   },
   {
     src: "/testimonials/firstlady.jpg",
     alt: "FirstLady",
-    link: "https://firstlady.com", // replace with real link
+    link: "https://wa.me/2349076267713",
   },
 ];
 
@@ -43,7 +43,9 @@ const testimonials = [
     phone: "+234 907 360 5341",
     photo: "/testimonials/abdulkareem.jpg",
     comment:
-      "Phenomenal Productions transformed our school’s digital presence. The website is clean, fast, and easy to navigate. Highly recommended!",
+      `As a trusted partner, they've consistently delivered top-notch software solutions that exceed expectations. 
+      If you're looking for a reliable software company that 
+      truly cares about your project's success, look no further than Phenomenal Productions. Highly recommended!`,
   },
   {
     name: "Prophet B. O. Oyesiji",

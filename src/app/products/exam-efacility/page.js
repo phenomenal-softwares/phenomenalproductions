@@ -1,5 +1,3 @@
-"use client";
-
 import ProductsHero from "@/components/Products/exam-efacility/ProductsHero";
 import FeaturesSection from "@/components/Products/exam-efacility/FeaturesSection";
 import ShowcaseSection from "@/components/Products/exam-efacility/ShowcaseSection";

@@ -1,5 +1,3 @@
-"use client";
-
 import ProductsHero from "@/components/Products/castle-royal/ProductsHero";
 import FeaturesSection from "@/components/Products/castle-royal/FeaturesSection";
 import ShowcaseSection from "@/components/Products/castle-royal/ShowcaseSection";

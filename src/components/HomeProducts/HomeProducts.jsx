@@ -54,7 +54,7 @@ export default function HomeProducts() {
       }
     };
 
-    const scrollInterval = setInterval(scroll, 10);
+    const scrollInterval = setInterval(scroll, 30);
 
     return () => clearInterval(scrollInterval);
   }, []);

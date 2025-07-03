@@ -1,5 +1,3 @@
-"use client";
-
 import ProductsHero from "@/components/Products/rhodes-organic/ProductsHero";
 import FeaturesSection from "@/components/Products/rhodes-organic/FeaturesSection";
 import ShowcaseSection from "@/components/Products/rhodes-organic/ShowcaseSection";

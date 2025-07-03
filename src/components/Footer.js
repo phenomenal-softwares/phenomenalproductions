@@ -1,3 +1,4 @@
+import Link from "next/link";
 import "@/styles/footer.css";
 
 export default function Footer() {
@@ -12,6 +13,11 @@ export default function Footer() {
           support.
         </p>
         <p className="footer-copy">&copy; {currentYear} All rights reserved.</p>
+        <p className="footer-links">
+          <Link className="link" href="/terms-of-service">Terms of Service</Link>
+          <Link className="link" href="/privacy-policy">Privacy Policy</Link>
+          <Link className="link" href="/contact">Contact Us</Link>
+        </p>
       </div>
     </footer>
   );

@@ -1,5 +1,3 @@
-"use client";
-
 import ProductsHero from "@/components/Products/foodyglot/ProductsHero";
 import FeaturesSection from "@/components/Products/foodyglot/FeaturesSection";
 import ShowcaseSection from "@/components/Products/foodyglot/ShowcaseSection";

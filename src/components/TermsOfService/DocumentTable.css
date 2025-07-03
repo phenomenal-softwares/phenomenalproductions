@@ -1,0 +1,58 @@
+.doc-table-container {
+  padding: 3rem 1rem;
+  background-color: #fefefe;
+}
+
+.doc-heading {
+  color: #028174;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.doc-table-wrapper {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.doc-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  max-width: 1000px;
+  background-color: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.doc-table thead {
+  background-color: #028174;
+  color: #fff;
+  text-align: left;
+}
+
+.doc-table th,
+.doc-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.doc-table tbody tr:hover {
+  background-color: #f0fdf9;
+}
+
+.download-link {
+  color: #028174;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.download-link:hover {
+  text-decoration: underline;
+}
+
+.coming-soon {
+  color: #888;
+  font-style: italic;
+}
