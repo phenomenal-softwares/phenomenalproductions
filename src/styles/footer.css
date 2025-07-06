@@ -53,12 +53,8 @@
 
 /* === MOBILE STYLING === */
 @media (max-width: 768px) {
-  .footer {
-    padding: 1rem 0.5rem;
-  }
-
   .footer-title {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
   }
 
   .footer-text {

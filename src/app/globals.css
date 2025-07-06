@@ -1,4 +1,11 @@
-/* Make sure html and body fill the screen */
+:root {
+  --font-primary: var(--font-inter);
+}
+
+body {
+  font-family: var(--font-primary);
+}
+
 html, body {
   height: 100%;
   margin: 0;
@@ -7,7 +14,6 @@ html, body {
   background-color: #fff;
 }
 
-/* Optional: set box-sizing globally */
 *, *::before, *::after {
   box-sizing: border-box;
 }
