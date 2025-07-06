@@ -3,4 +3,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://phenomenalproductions.com.ng/sitemap.xml
+Sitemap: https://phenomenalproductions.com.ng/sitemaps.xml
