@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop/BackToTop";
 import "@/app/globals.css";
+import Head from "next/head";
 
 export const metadata = {
   title: {
@@ -60,6 +61,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/logo.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <title>{metadata.title.default}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords.join(", ")} />
+        <meta name="author" content={metadata.authors[0].name} />
+        <meta name="google-site-verification" content="CO4uRaMmPsY-iDqLBUN8rgLOan7MXACA57jo3NCHpsI" />
+      </Head>
       <body>
         <div className="layout-wrapper">
           <header>
