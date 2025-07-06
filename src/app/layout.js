@@ -51,8 +51,8 @@ export const metadata = {
   authors: [{ name: "Abiodun Ojo", url: "https://abiodunojo.vercel.app" }],
   creator: "Phenomenal Productions",
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
+    icon: "/logo.ico",
+    shortcut: "/logo.ico",
     apple: "/apple-touch-icon.png",
   },
 };

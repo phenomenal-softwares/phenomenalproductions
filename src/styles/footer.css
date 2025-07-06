@@ -53,20 +53,24 @@
 
 /* === MOBILE STYLING === */
 @media (max-width: 768px) {
+  .footer {
+    padding: 1rem 0.5rem;
+  }
+
   .footer-title {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .footer-text {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
 
   .footer-copy {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
   }
 
   .footer-links {
     flex-direction: column;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
   }
 }

@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  background: linear-gradient(135deg, #f0f8ff, #e0f7fa);
 }
 
 .formWrapper {
@@ -199,6 +200,12 @@
   font-size: 0.95rem;
   color: #0a6b8b;
   line-height: 1.4;
+}
+
+.link {
+  color: #028174;
+  text-decoration: none;
+  font-weight: 600;
 }
 
 @media (max-width: 768px) {

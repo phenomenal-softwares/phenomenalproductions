@@ -8,7 +8,7 @@ import Link from "next/link";
 import styles from "./HeroSection.module.css";
 
 const quotes = [
-  "Welcome to Phenomenal Productions... where we make you stand out.",
+  "Welcome to Phenomenal Productions. Let's take you across the globe.",
   "We provide Web, Android, and iOS tech solutions",
   "Build digital products that impact lives.",
   "Transform your vision into world-class platforms.",
