@@ -25,5 +25,6 @@ html, body {
 }
 
 main {
+  margin-top: 2rem;
   flex: 1;
 }

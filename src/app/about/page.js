@@ -5,7 +5,7 @@ export const metadata = {
   description: "Learn about our mission, values, and the founder behind Phenomenal Productions.",
   openGraph: {
     title: "About Phenomenal Productions",
-    description: "We’re passionate about building tech solutions that matter. Meet our founder.",
+    description: "We’re passionate about building tech solutions that matter. Meet our founder Abiodun Ojo.",
     url: "https://phenomenalproductions.com.ng/about",
     siteName: "Phenomenal Productions",
     images: [

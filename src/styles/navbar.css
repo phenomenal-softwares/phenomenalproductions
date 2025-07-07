@@ -47,7 +47,7 @@
   background-color: #028174; /* Kiwi Green */
   color: #fff;
   padding: 0.8rem 1.5rem;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 1000;
   width: 100%;
