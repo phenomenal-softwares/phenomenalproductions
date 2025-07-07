@@ -87,7 +87,7 @@ export default function HeroSection() {
           animate="visible"
         >
           <motion.button className={styles.ctaButton} variants={itemVariants}>
-            <Link href="/contact" style={{ color: "inherit", textDecoration: "none" }}>
+            <Link href="/client-form" style={{ color: "inherit", textDecoration: "none" }}>
             <FaCode style={{ marginRight: 8 }} />
             Create Your Website or App
             </Link>
