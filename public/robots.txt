@@ -1,6 +1,6 @@
 # robots.txt for Phenomenal Productions
 
 User-agent: *
-Disallow:
+Allow: /
 
 Sitemap: https://phenomenalproductions.com.ng/sitemaps.xml
