@@ -5,6 +5,22 @@ import MapEmbed from "@/components/Contact/MapEmbed";
 export const metadata = {
   title: "Contact Us | Phenomenal Productions",
   description: "Reach out to Phenomenal Productions via email or phone. Let’s discuss your next project.",
+  alternates: {
+    canonical: "https://phenomenalproductions.com.ng/contact",
+  },
+  keywords: [
+    "Phenomenal Productions",
+    "contact us",
+    "software development",
+    "web development",
+    "mobile app development",
+    "Nigerian software company",
+    "contact information",
+  ],
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
     title: "Contact Phenomenal Productions",
     description: "Send us a message and let's get your project started today.",

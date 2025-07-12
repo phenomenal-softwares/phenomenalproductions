@@ -8,6 +8,24 @@ export const metadata = {
   title: "Phenomenal Productions | Top-Tier Software Company in Nigeria",
   description:
     "We build elegant, scalable digital solutions for brands and businesses. Let’s turn your idea into a digital, global, product.",
+  alternates: {
+    canonical: "https://phenomenalproductions.com.ng",
+  },
+  keywords: [
+    "Phenomenal Productions",
+    "software development",
+    "web development",
+    "mobile app development",
+    "Nigerian software company",
+    "digital products",
+    "custom software",
+    "web applications",
+    "mobile applications",
+  ],
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
     title: "Phenomenal Productions | Top-Tier Software Company in Nigeria",
     description:

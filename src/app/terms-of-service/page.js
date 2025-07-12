@@ -5,6 +5,19 @@ import DocumentTable from "@/components/TermsOfService/DocumentTable";
 export const metadata = {
   title: "Terms of Service | Phenomenal Productions",
   description: "Please review our official service terms regarding payments, project timelines, intellectual property, and more.",
+  alternates: {
+    canonical: "https://phenomenalproductions.com.ng/terms-of-service",
+  },
+  keywords: [
+    "Phenomenal Productions",
+    "terms of service",
+    "service terms",
+    "project policies",
+    "Nigerian software company",
+    "legal terms",
+    "payment terms",
+    "intellectual property",
+  ],
   openGraph: {
     title: "Terms of Service | Phenomenal Productions",
     description: "Understand our legal terms and project policies before engagement.",

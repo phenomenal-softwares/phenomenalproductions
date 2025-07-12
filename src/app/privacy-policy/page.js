@@ -3,6 +3,20 @@ import PrivacyPolicy from "@/components/PrivacyPolicy/PrivacyPolicy";
 export const metadata = {
   title: "Privacy Policy | Phenomenal Productions",
   description: "Learn how we collect, use, and protect your data at Phenomenal Productions.",
+  keywords: [
+    "Phenomenal Productions",
+    "privacy policy",
+    "data protection",
+    "user privacy",
+    "Nigerian software company",
+    "data collection",
+    "data usage",
+    "GDPR compliance",
+    "Next.js privacy policy",
+  ],
+  alternates: {
+    canonical: "https://phenomenalproductions.com.ng/privacy-policy",
+  },
   openGraph: {
     title: "Privacy Policy | Phenomenal Productions",
     description: "Transparency in how we handle your information.",
