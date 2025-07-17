@@ -39,8 +39,10 @@
   background-position: center;
   background-color: #028174;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+  /* Reflection effect for WebKit browsers */
   -webkit-box-reflect: below 3px
     linear-gradient(transparent 75%, rgba(255, 255, 255, 0.125));
+  /* Fallback for browsers that do not support -webkit-box-reflect */
   border: 2px solid #92de8b;
 }
 .cardb {

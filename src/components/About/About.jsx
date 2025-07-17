@@ -65,7 +65,7 @@ export default function About() {
         viewport={{ once: true }}
         variants={fadeInUp}
       >
-        <h2>What we enjoy doing:</h2>
+        <h2>Services we proudly offer:</h2>
         <ul className={styles.iconList}>
           <li>
             <FaGlobe className={styles.icon} />
