@@ -1,9 +1,10 @@
 "use client";
+import React from "react";
 
+import "./HomeProducts.css";
 import styles from "./HomeProducts.module.css";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useEffect, useRef } from "react";
 import Link from "next/link";
 
 // Image imports
@@ -16,11 +17,7 @@ import product5 from "../../../public/images/homeproducts/product5.jpg";
 import product6 from "../../../public/images/homeproducts/product6.png";
 import product7 from "../../../public/images/homeproducts/product7.jpg";
 import product8 from "../../../public/images/homeproducts/product8.jpg";
-import product9 from "../../../public/images/homeproducts/product9.jpg";
-import product10 from "../../../public/images/homeproducts/product10.jpg";
-import product11 from "../../../public/images/homeproducts/product11.jpg";
 
-// Store product images in a variable
 const images = [
   product1,
   product2,
@@ -30,35 +27,9 @@ const images = [
   product6,
   product7,
   product8,
-  product9,
-  product10,
-  product11,
 ];
 
 export default function HomeProducts() {
-  const scrollRef = useRef(null);
-
-  useEffect(() => {
-    const container = scrollRef.current;
-    const scrollSpeed = 1.2;
-
-    const scroll = () => {
-      if (container) {
-        // Only scroll if we're not already at the end
-        const maxScrollLeft = container.scrollWidth - container.clientWidth;
-        if (container.scrollLeft < maxScrollLeft) {
-          container.scrollLeft += scrollSpeed;
-        } else {
-          clearInterval(scrollInterval);
-        }
-      }
-    };
-
-    const scrollInterval = setInterval(scroll, 30);
-
-    return () => clearInterval(scrollInterval);
-  }, []);
-
   return (
     <motion.section
       className={styles.productsSection}
@@ -67,6 +38,7 @@ export default function HomeProducts() {
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
     >
+      {/* Header */}
       <div className={styles.headerSection}>
         <div className={styles.left}>
           <Image
@@ -86,16 +58,19 @@ export default function HomeProducts() {
         </div>
       </div>
 
-      <div className={styles.content}>
-        <div className={styles.slider} ref={scrollRef}>
-          {[...images, ...images].map((img, index) => (
-            <Image
-              key={index}
-              src={img}
-              alt={`Product ${(index % images.length) + 1}`}
-              className={styles.slide}
-              placeholder="blur"
-            />
+      {/* Carousel */}
+      <div className="carousel-section">
+        <div className="carousel">
+          {images.map((img, i) => (
+            <React.Fragment key={i}>
+              <div
+                className={`card c${i + 1}`}
+                style={{
+                  backgroundImage: `url(${img.src})`,
+                }}
+              ></div>
+              <div className={`cardb cb${i + 1}`}></div>
+            </React.Fragment>
           ))}
         </div>
       </div>
@@ -103,7 +78,7 @@ export default function HomeProducts() {
       {/* CTA */}
       <div className={styles.cta}>
         <Link href="/products" className={styles.ctaBtn}>
-          View Our Products
+          Check Out Our Products
         </Link>
       </div>
     </motion.section>

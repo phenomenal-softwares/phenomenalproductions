@@ -5,6 +5,14 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import {
+  FaHome,
+  FaInfoCircle,
+  FaBox,
+  FaRocket,
+  FaEnvelope,
+} from "react-icons/fa";
+
 import "@/styles/navbar.css";
 
 export default function Navbar() {
@@ -33,11 +41,11 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/products", label: "Products" },
-    { href: "/client-form", label: "Get Started" },
-    { href: "/contact", label: "Contact" }
+    { href: "/", label: "Home", icon: <FaHome /> },
+    { href: "/about", label: "About", icon: <FaInfoCircle /> },
+    { href: "/products", label: "Products", icon: <FaBox /> },
+    { href: "/client-form", label: "Get Started", icon: <FaRocket /> },
+    { href: "/contact", label: "Contact", icon: <FaEnvelope /> },
   ];
 
   return (
@@ -64,22 +72,21 @@ export default function Navbar() {
           <span className="bar bottom"></span>
         </button>
 
-        {/* Always-rendered desktop nav */}
         <ul className="navbar-links desktop">
-          {navLinks.map(({ href, label }) => (
+          {navLinks.map(({ href, label, icon }) => (
             <li key={href}>
               <Link
                 href={href}
                 className={isActive(href) ? "active" : ""}
                 onClick={() => setMenuOpen(false)}
               >
-                {label}
+                <span className="nav-icon">{icon}</span>
+                <span className="nav-label">{label}</span>
               </Link>
             </li>
           ))}
         </ul>
 
-        {/* AnimatePresence for mobile nav */}
         <AnimatePresence>
           {menuOpen && (
             <motion.ul
@@ -90,14 +97,15 @@ export default function Navbar() {
               variants={menuVariants}
               key="mobile-nav"
             >
-              {navLinks.map(({ href, label }) => (
+              {navLinks.map(({ href, label, icon }) => (
                 <motion.li key={href} variants={itemVariants}>
                   <Link
                     href={href}
                     className={isActive(href) ? "active" : ""}
                     onClick={() => setMenuOpen(false)}
                   >
-                    {label}
+                    <span className="nav-icon">{icon}</span>
+                    <span className="nav-label">{label}</span>
                   </Link>
                 </motion.li>
               ))}

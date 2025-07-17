@@ -30,6 +30,16 @@ export default function Products() {
         schools, and everyday users thrive in the digital world.
       </motion.p>
 
+      <motion.p
+        className={styles.subtitle}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5 }}
+      >
+        <strong><u>CLICK</u></strong> on a product to learn more about it, or scroll down to see our
+        featured products.
+      </motion.p>
+
       <div className={styles.grid}>
         {products.map((product, index) => (
           <motion.div
