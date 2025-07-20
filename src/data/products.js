@@ -1,5 +1,11 @@
 const products = [
   {
+    id: "stride-footwear",
+    name: "Stride: Men Footwear Store",
+    description: "A modern e-commerce platform for male footwear shopping.",
+    image: "/images/homeproducts/product12.jpeg",
+  },
+  {
     id: "exam-efacility",
     name: "Integrated Exam E-Facility",
     description: "A modern platform for exam management, CBT, and performance tracking.",
