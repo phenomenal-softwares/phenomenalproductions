@@ -11,10 +11,14 @@ const categories = [
   { name: "E-commerce", examples: "Online store, Inventory app" },
   { name: "Fintech", examples: "Wallet, Loan app, Budget tracker" },
   { name: "Religious", examples: "Church app, Sermon archive, Donation system" },
-  { name: "Entertainment", examples: "Streaming app, Music player" },
+  { name: "Entertainment", examples: "Streaming app, Music player, Games" },
   { name: "Health", examples: "Fitness tracker, Appointment booking" },
   { name: "Real Estate", examples: "Property listings, Agent portal" },
   { name: "Booking", examples: "Hotel, Taxi, Event tickets" },
+  { name: "Lifestyle", examples: "Recipe app, Travel guide, Fashion" },
+  { name: "Utility", examples: "Calculator, Weather app, To-do list" },
+  { name: "Social Media", examples: "Chat app, Community forum" },
+  { name: "News & Media", examples: "Blog, News aggregator" },
   { name: "Others", examples: "Anything custom-built to fit your brand" },
 ];
 
