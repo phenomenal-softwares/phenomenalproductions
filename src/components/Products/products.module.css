@@ -1,5 +1,9 @@
 .main {
-  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
   max-width: 1200px;
   margin: auto;
 }
@@ -14,7 +18,7 @@
 .subtitle {
   text-align: center;
   font-size: 1.2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   color: #0a6b8b; /* Kiwi blue */
 }
 
@@ -24,7 +28,94 @@
   gap: 2rem;
 }
 
+/* Filter Bar */
+.filterBar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem 0;
+  padding: 0.8rem 1.2rem;
+  background-color: rgba(2, 129, 116, 0.1); /* light Kiwi accent */
+  border-radius: 8px;
+  border: 1px solid #028174;
+}
+
+.filterIcon {
+  font-size: 1.2rem;
+  color: #028174;
+}
+
+/* Wrapper */
+.dropdownWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown styling */
+.dropdown {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0.6rem 2.5rem 0.6rem 1rem;
+  border-radius: 8px;
+  border: 2px solid #028174;
+  background-color: #fff;
+  color: #0a6b8b;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 2px 6px rgba(2, 129, 116, 0.15);
+}
+
+/* Hover & focus states */
+.dropdown:hover {
+  border-color: #0a6b8b;
+  color: #028174;
+  box-shadow: 0 3px 8px rgba(2, 129, 116, 0.25);
+}
+
+.dropdown:focus {
+  border-color: #92de8b;
+  box-shadow: 0 0 0 3px rgba(146, 222, 139, 0.5);
+}
+
+/* Custom arrow */
+.arrow {
+  content: "";
+  position: absolute;
+  right: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #028174;
+  transition: transform 0.3s ease;
+  pointer-events: none;
+}
+
+/* Rotate arrow when open */
+.arrow.open {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.results {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #028174;
+  background-color: #92de8b;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+}
+
+/* Product Card */
 .card {
+  display: flex;
   background: #ffffff;
   border-radius: 10px;
   overflow: hidden;
@@ -38,7 +129,7 @@
 }
 
 .image {
-  width: 100%;
+  width: 20%;
   height: auto;
   object-fit: cover;
 }
@@ -49,14 +140,14 @@
 
 .cardContent h3 {
   margin: 0 0 0.5rem 0;
-  font-size: 1.3rem;
-  color: #028174; /* Kiwi green */
+  font-size: 1.1rem;
+  color: #028174;
 }
 
 .cardContent p {
   margin: 0;
-  font-size: 0.95rem;
-  color: #0a6b8b; /* Kiwi blue */
+  font-size: 0.9rem;
+  color: #0a6b8b;
 }
 
 /* === Mobile adjustments === */
@@ -75,10 +166,10 @@
   }
 
   .cardContent h3 {
-    font-size: 1.15rem;
+    font-size: 0.9rem;
   }
 
   .cardContent p {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
   }
 }

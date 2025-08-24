@@ -16,7 +16,7 @@ const products = [
   {
     id: "exam-efacility",
     name: "Integrated Exam E-Facility",
-    description: "A academic platform for exam management, CBT, and performance tracking.",
+    description: "An academic platform for exam management and CBT featured with admin, parent, and student dashboards.",
     image: "/images/homeproducts/product1.jpg",
     type: "educational"
   },

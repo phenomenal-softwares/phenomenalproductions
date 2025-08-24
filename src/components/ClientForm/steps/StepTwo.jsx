@@ -1,7 +1,6 @@
 "use client";
 
 import styles from "../FormWizard.module.css";
-import { useEffect, useState } from "react";
 
 const platforms = ["Web", "Android", "iOS"];
 
@@ -23,7 +22,6 @@ const categories = [
 ];
 
 export default function StepTwo({ data, onChange, errors = {} }) {
-  // You may keep validation elsewhere now — it's already handled in FormWizard
   const handleChange = (e) => {
     const { name, value } = e.target;
     onChange(name, value);

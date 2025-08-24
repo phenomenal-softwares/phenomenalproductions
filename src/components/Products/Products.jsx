@@ -5,9 +5,25 @@ import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import products from "@/data/products";
+import { useState, useMemo } from "react";
+import { FaFilter } from "react-icons/fa";
 
 export default function Products() {
   const router = useRouter();
+  const [selectedType, setSelectedType] = useState("All Products");
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  // Get unique product types
+  const productTypes = useMemo(() => {
+    const types = products.map((p) => p.type);
+    return ["All Products", ...new Set(types)];
+  }, []);
+
+  // Filter products based on type
+  const filteredProducts =
+    selectedType === "All Products"
+      ? products
+      : products.filter((p) => p.type === selectedType);
 
   return (
     <main className={styles.main}>
@@ -30,18 +46,46 @@ export default function Products() {
         schools, and everyday users thrive in the digital world.
       </motion.p>
 
-      <motion.p
-        className={styles.subtitle}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5 }}
+      {/* Filter Bar */}
+      <motion.div
+        className={styles.filterBar}
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4 }}
       >
-        <strong><u>CLICK</u></strong> on a product to learn more about it, or scroll down to see our
-        featured products.
-      </motion.p>
+        <FaFilter className={styles.filterIcon} />
 
+        {/* Dropdown wrapper with arrow */}
+        <div className={styles.dropdownWrapper}>
+          <select
+            value={selectedType}
+            onChange={(e) => {
+              setSelectedType(e.target.value);
+              setDropdownOpen(false); // close after selection
+            }}
+            onFocus={() => setDropdownOpen(true)}
+            onBlur={() => setDropdownOpen(false)}
+            className={styles.dropdown}
+          >
+            {productTypes.map((type) => (
+              <option key={type} value={type}>
+                {type}
+              </option>
+            ))}
+          </select>
+          <span
+            className={`${styles.arrow} ${dropdownOpen ? styles.open : ""}`}
+          />
+        </div>
+
+        <span className={styles.results}>
+          {filteredProducts.length} results
+        </span>
+      </motion.div>
+
+      {/* Products Grid */}
       <div className={styles.grid}>
-        {products.map((product, index) => (
+        {filteredProducts.map((product, index) => (
           <motion.div
             key={product.id}
             className={styles.card}
