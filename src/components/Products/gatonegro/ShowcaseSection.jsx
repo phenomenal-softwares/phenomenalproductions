@@ -1,9 +1,12 @@
 "use client";
 
+import { useState } from "react";
 import styles from "./ShowcaseSection.module.css";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useState } from "react";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+import { FaImages } from "react-icons/fa";
 
 const imagePaths = [
   "/products/gatonegro/shot1.jpg",
@@ -19,7 +22,7 @@ const imagePaths = [
 ];
 
 export default function ShowcaseSection() {
-  const [selectedImg, setSelectedImg] = useState(null);
+  const [open, setOpen] = useState(false);
 
   return (
     <motion.section
@@ -31,39 +34,35 @@ export default function ShowcaseSection() {
     >
       <h2>Product Showcase</h2>
 
-      <div className={styles.grid}>
-        {imagePaths.map((src, index) => (
-          <motion.div
-            key={index}
-            className={styles.imgWrapper}
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: "spring", stiffness: 300 }}
-            onClick={() => setSelectedImg(src)}
-          >
-            <Image
-              src={src}
-              alt={`Screenshot ${index + 1}`}
-              width={800}
-              height={500}
-              className={styles.image}
-              placeholder="blur"
-              blurDataURL={src}
-            />
-          </motion.div>
-        ))}
-      </div>
-
-      {selectedImg && (
-        <div className={styles.lightbox} onClick={() => setSelectedImg(null)}>
-          <Image
-            src={selectedImg}
-            alt="Expanded View"
-            width={1200}
-            height={700}
-            className={styles.lightboxImg}
-          />
+      {/* Single clickable preview with permanent overlay */}
+      <motion.div
+        className={styles.previewWrapper}
+        whileHover={{ scale: 1.03 }}
+        transition={{ type: "spring", stiffness: 300 }}
+        onClick={() => setOpen(true)}
+      >
+        <Image
+          src={imagePaths[0]}
+          alt="Main Screenshot"
+          width={800}
+          height={500}
+          className={styles.image}
+          placeholder="blur"
+          blurDataURL={imagePaths[0]}
+        />
+        <div className={styles.overlay}>
+          <FaImages className={styles.overlayIcon} />
+          <span className={styles.overlayText}>View Gallery</span>
         </div>
-      )}
+      </motion.div>
+
+      {/* Lightbox with all images */}
+      <Lightbox
+        open={open}
+        close={() => setOpen(false)}
+        slides={imagePaths.map((src) => ({ src }))}
+        controller={{ closeOnBackdropClick: true }}
+      />
     </motion.section>
   );
 }
