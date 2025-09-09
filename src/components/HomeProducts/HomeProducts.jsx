@@ -9,6 +9,7 @@ import Link from "next/link";
 
 // Image imports
 import heroImg from "../../../public/images/homeproducts/product-hero.jpg";
+import pepperandpalm from "../../../public/images/homeproducts/pepper-and-palm.jpg";
 import primeshelter from "../../../public/images/homeproducts/primeshelter.jpeg";
 import product12 from "../../../public/images/homeproducts/product12.jpeg";
 import product1 from "../../../public/images/homeproducts/product1.jpg";
@@ -19,6 +20,7 @@ import product5 from "../../../public/images/homeproducts/product5.jpg";
 import product6 from "../../../public/images/homeproducts/product6.png";
 
 const images = [
+  pepperandpalm,
   primeshelter,
   product12,
   product1,
@@ -26,7 +28,6 @@ const images = [
   product3,
   product4,
   product5,
-  product6,
 ];
 
 export default function HomeProducts() {

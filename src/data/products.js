@@ -1,5 +1,12 @@
 const products = [
   {
+    id: "pepper-and-palm",
+    name: "Pepper & Palm Restaurant",
+    description: "Elegant restaurant website with top-notch features.",
+    image: "/images/homeproducts/pepper-and-palm.jpg",
+    type: "e-commerce"
+  },
+  {
     id: "primeshelter",
     name: "Primeshelter: Real Estate & Properties",
     description: "A nice real estate site for buying, selling, and renting properties.",

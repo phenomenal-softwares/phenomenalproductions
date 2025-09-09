@@ -1,0 +1,95 @@
+.devSection {
+  background: #e6dfc9; /* pale yellow for the restricted vibe */
+  padding: 2rem;
+  margin: 3rem auto;
+  border: 3px solid #0e4724; /* dark green border */
+  border-radius: 12px;
+  position: relative;
+  max-width: 800px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.devSection::before {
+  content: "CONFIDENTIAL";
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%) rotate(-25deg);
+  font-size: 4rem;
+  font-weight: 900;
+  color: rgba(200,0,0,0.08); /* subtle red watermark */
+  pointer-events: none;
+}
+
+.title {
+  color: #166534; /* green */
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.intro {
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.techList {
+  list-style: square inside;
+  color: #222;
+  font-family: monospace;
+  margin-bottom: 1.5rem;
+}
+
+.codeBlock {
+  background: #1a1a1a;
+  color: #f1f1f1;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-family: monospace;
+  font-size: 0.9rem;
+  overflow-x: auto;
+}
+
+.downloadBtn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: #c62828; /* dark red */
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+
+.downloadBtn:hover {
+  background: #8e0000;
+}
+
+@media (max-width: 640px) {
+  .devSection {
+    padding: 1rem;
+    margin: 1.5rem;
+  }
+
+  .devSection::before {
+    font-size: 2.5rem; /* smaller watermark */
+    top: 30%;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .codeBlock {
+    font-size: 0.8rem;
+    padding: 0.75rem;
+  }
+
+  .downloadBtn {
+    width: 100%;
+    text-align: center;
+  }
+}

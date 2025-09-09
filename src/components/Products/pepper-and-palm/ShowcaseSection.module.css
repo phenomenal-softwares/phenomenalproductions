@@ -1,0 +1,58 @@
+.showcaseSection {
+  padding: 5rem 2rem;
+  background: #fefce8;
+  text-align: center;
+}
+
+.showcaseSection h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #166534;
+}
+
+/* Image preview container */
+.previewWrapper {
+  position: relative;
+  display: inline-block;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.previewWrapper:hover .image {
+  transform: scale(1.05);
+}
+
+/* Permanent overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.overlayIcon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.overlayText {
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
