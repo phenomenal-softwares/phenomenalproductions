@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
-import TikTokSection from "@/components/TiktokSection/TiktokSection";
+import TikTokSection from "@/components/TikTokSection/TikTokSection";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop/BackToTop";
 import "@/app/globals.css";
