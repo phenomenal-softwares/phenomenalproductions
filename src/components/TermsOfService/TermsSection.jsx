@@ -53,7 +53,7 @@ const terms = [
   {
     title: "Legal Jurisdiction",
     content:
-      "All disputes shall be settled under the laws of the Federal Republic of Nigeria, and handled through appropriate legal means within Osun State jurisdiction if necessary.",
+      "All disputes shall be settled under the laws of the Federal Republic of Nigeria, and handled through appropriate legal means within appropriate jurisdiction if necessary.",
   },
 ];
 

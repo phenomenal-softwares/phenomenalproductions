@@ -1,5 +1,12 @@
 const products = [
   {
+    id: "ireoluwa-unisex",
+    name: "Ireoluwa Unisex Store",
+    description: "Magnificent e-commerce site for all your fashion needs.",
+    image: "/images/homeproducts/ireoluwa-unisex.jpeg",
+    type: "e-commerce"
+  },
+  {
     id: "pepper-and-palm",
     name: "Pepper & Palm Restaurant",
     description: "Elegant restaurant website with top-notch features.",

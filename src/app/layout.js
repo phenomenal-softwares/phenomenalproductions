@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
+import TikTokSection from "@/components/TiktokSection/TiktokSection";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop/BackToTop";
 import "@/app/globals.css";
@@ -79,6 +80,9 @@ export default function RootLayout({ children }) {
             {children}
             <BackToTop />
           </main>
+          <section>
+            <TikTokSection />
+          </section>
           <footer>
             <Footer />
           </footer>
