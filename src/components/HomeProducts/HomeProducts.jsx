@@ -9,6 +9,7 @@ import Link from "next/link";
 
 // Image imports
 import heroImg from "../../../public/images/homeproducts/product-hero.jpg";
+import mantiswallet from "../../../public/images/homeproducts/mantis-wallet.jpeg";
 import ireoluwaunisex from "../../../public/images/homeproducts/ireoluwa-unisex.jpeg";
 import pepperandpalm from "../../../public/images/homeproducts/pepper-and-palm.jpg";
 import primeshelter from "../../../public/images/homeproducts/primeshelter.jpeg";
@@ -19,6 +20,7 @@ import product3 from "../../../public/images/homeproducts/product3.jpg";
 import product4 from "../../../public/images/homeproducts/product4.jpg";
 
 const images = [
+  mantiswallet,
   ireoluwaunisex,
   pepperandpalm,
   primeshelter,
@@ -26,7 +28,6 @@ const images = [
   product1,
   product2,
   product3,
-  product4,
 ];
 
 export default function HomeProducts() {

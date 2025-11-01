@@ -1,5 +1,12 @@
 const products = [
   {
+    id: "mantis-wallet",
+    name: "Mantis Digital Wallet",
+    description: "A demo digital wallet for managing finances and bill payments.",
+    image: "/images/homeproducts/mantis-wallet.jpeg",
+    type: "fintech"
+  },
+  {
     id: "ireoluwa-unisex",
     name: "Ireoluwa Unisex Store",
     description: "Magnificent e-commerce site for all your fashion needs.",

@@ -5,7 +5,7 @@ function DeveloperInfo() {
     <section className={styles.devSection}>
       <h2 className={styles.title}>Developer Info — Restricted Access</h2>
       <p className={styles.intro}>
-        This demo project was built as a frontend-only restaurant ordering app
+        This demo project was built as a frontend-only fashion shopping app
         to showcase UI/UX, responsive design, and animation. You’re peeking into
         the developer dossier 👀.
       </p>
