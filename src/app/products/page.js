@@ -1,5 +1,6 @@
 import React from "react";
 import Products from "@/components/Products/Products";
+import VideoBackgroundSection from "@/components/VideoBackground/VideoBackgroundSection";
 
 export const metadata = {
   title: "Our Products | Phenomenal Productions",
@@ -42,6 +43,11 @@ export default function ProductsPage() {
   return (
     <main>
       <Products />
+      <VideoBackgroundSection
+        videoSrc="/videos/product-bg.mp4"
+        headline="Innovative Digital Products"
+        subtext="From exam portals to mobile apps, we create solutions that solve real problems."
+      />
     </main>
   );
 }
