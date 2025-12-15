@@ -9,25 +9,24 @@ import Link from "next/link";
 
 // Image imports
 import heroImg from "../../../public/images/homeproducts/product-hero.jpg";
-import mantiswallet from "../../../public/images/homeproducts/mantis-wallet.jpeg";
+import moleculeVisualizer from "../../../public/images/homeproducts/molecule-visualizer.jpeg";
+import mantisWallet from "../../../public/images/homeproducts/mantis-wallet.jpeg";
 import ireoluwaunisex from "../../../public/images/homeproducts/ireoluwa-unisex.jpeg";
 import pepperandpalm from "../../../public/images/homeproducts/pepper-and-palm.jpg";
 import primeshelter from "../../../public/images/homeproducts/primeshelter.jpeg";
 import product12 from "../../../public/images/homeproducts/product12.jpeg";
 import product1 from "../../../public/images/homeproducts/product1.jpg";
 import product2 from "../../../public/images/homeproducts/product2.jpg";
-import product3 from "../../../public/images/homeproducts/product3.jpg";
-import product4 from "../../../public/images/homeproducts/product4.jpg";
 
 const images = [
-  mantiswallet,
+  moleculeVisualizer,
+  mantisWallet,
   ireoluwaunisex,
   pepperandpalm,
   primeshelter,
   product12,
   product1,
   product2,
-  product3,
 ];
 
 export default function HomeProducts() {

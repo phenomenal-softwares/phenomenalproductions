@@ -1,5 +1,12 @@
 const products = [
   {
+    id: "molecule-visualizer-3d",
+    name: "Molecule Visualizer 3D",
+    description: "A 3D molecular visualization tool for chemistry enthusiasts.",
+    image: "/images/homeproducts/molecule-visualizer.jpeg",
+    type: "educational"
+  },
+  {
     id: "mantis-wallet",
     name: "Mantis Digital Wallet",
     description: "A demo digital wallet for managing finances and bill payments.",

@@ -32,6 +32,9 @@ function DeveloperInfo() {
         <li>
           <strong>Hosting:</strong> Vercel
         </li>
+        <li>
+          <strong>Date Published:</strong> September 29, 2025
+        </li>
       </ul>
 
       <div className={styles.codeBlock}>
