@@ -28,7 +28,7 @@ const TikTokSection = () => {
           </h2>
           <p className="tiktok-subtitle">
             Catch behind-the-scenes, quick tips, and fun creative vibes.  
-            Join the <span>#PhenomenalVerse</span> and let’s make magic together!
+            Join the <span>#PhenomenalCrew</span> and let’s have fun together!
           </p>
           <a
             href="https://tiktok.com/@phenomenalproductionsng"

@@ -24,15 +24,15 @@ export default function CTASection() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <p>Check out the live version</p>
+          <p>Coming soon on Android and iOS. Check out the live web version</p>
           <a
-            href="https://molecule-visualizer-3d.vercel.app/"
+            href="https://pick-a-card-game.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.ctaBtn}
           >
             <FaGlobe className={styles.icon} />
-            Visit App
+            Play Game
           </a>
         </motion.div>
 

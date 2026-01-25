@@ -1,5 +1,12 @@
 const products = [
   {
+    id: "pick-a-card-game",
+    name: "Pick-A-Card",
+    description: "Simple, fun, and challenging brain-training card picking game.",
+    image: "/images/homeproducts/pick-a-card-game.jpeg",
+    type: "game"
+  },
+  {
     id: "molecule-visualizer-3d",
     name: "Molecule Visualizer 3D",
     description: "A 3D molecular visualization tool for chemistry enthusiasts.",
