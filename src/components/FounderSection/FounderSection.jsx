@@ -53,15 +53,6 @@ export default function FounderSection() {
             Multilingual, and Guitarist. He is a lifelong learner and a lover of children.
           </p>
 
-          <a
-            href="https://abiodunojo.vercel.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.portfolioBtn}
-          >
-            View Portfolio <FaArrowRight style={{ marginLeft: "8px" }} />
-          </a>
-
           <div className={styles.socialLinks}>
             <a
               href="https://www.linkedin.com/in/abiodun-ojo-3970422b2"
