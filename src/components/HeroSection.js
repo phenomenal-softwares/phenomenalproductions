@@ -1,9 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import ThreeScene from "./ThreeScene";
-import { motion } from "framer-motion";
-import { FaChevronDown, FaCode } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import styles from "./HeroSection.module.css";
 
@@ -15,11 +13,12 @@ const quotes = [
   "Let your organization speak on the web and beyond",
 ];
 
+const CHARACTERS =
+  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*<>?/[]{}";
+
 export default function HeroSection() {
-  const [displayedText, setDisplayedText] = useState("");
   const [quoteIndex, setQuoteIndex] = useState(0);
-  const [charIndex, setCharIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
+  const [displayedText, setDisplayedText] = useState(quotes[0]);
 
   const containerVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -27,7 +26,7 @@ export default function HeroSection() {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6,
+        duration: 0.8,
         ease: "easeOut",
         when: "beforeChildren",
         staggerChildren: 0.2,
@@ -40,68 +39,114 @@ export default function HeroSection() {
     visible: { opacity: 1, y: 0 },
   };
 
+  // Scramble animation
   useEffect(() => {
-    const currentQuote = quotes[quoteIndex];
+    const target = quotes[quoteIndex];
 
-    const typeSpeed = isDeleting ? 30 : 80;
-    const delay = isDeleting ? 600 : 1000;
+    let frame = 0;
 
-    const timer = setTimeout(() => {
-      const updatedText = isDeleting
-        ? currentQuote.substring(0, charIndex - 1)
-        : currentQuote.substring(0, charIndex + 1);
+    // Every character gets a random reveal frame
+    const revealFrames = target.split("").map((char) => {
+      if (char === " ") return 0;
+      return Math.floor(Math.random() * 18) + 8;
+    });
 
-      setDisplayedText(updatedText);
-      setCharIndex(isDeleting ? charIndex - 1 : charIndex + 1);
+    const interval = setInterval(() => {
+      frame++;
 
-      if (!isDeleting && updatedText === currentQuote) {
-        setTimeout(() => setIsDeleting(true), delay);
-      } else if (isDeleting && updatedText === "") {
-        setIsDeleting(false);
-        setQuoteIndex((prev) => (prev + 1) % quotes.length);
+      const output = target
+        .split("")
+        .map((char, index) => {
+          if (char === " ") return " ";
+
+          if (frame >= revealFrames[index]) {
+            return char;
+          }
+
+          return CHARACTERS[Math.floor(Math.random() * CHARACTERS.length)];
+        })
+        .join("");
+
+      setDisplayedText(output);
+
+      if (frame > Math.max(...revealFrames)) {
+        clearInterval(interval);
+        setDisplayedText(target);
       }
-    }, typeSpeed);
+    }, 45);
 
-    return () => clearTimeout(timer);
-  }, [charIndex, isDeleting, quoteIndex]);
+    return () => clearInterval(interval);
+  }, [quoteIndex]);
 
-  const scrollToNextSection = () => {
-    const about = document.getElementById("about");
-    if (about) {
-      about.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  // Rotate quotes
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setQuoteIndex((prev) => (prev + 1) % quotes.length);
+    }, 4200);
+
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <div className={styles.heroWrapper}>
-      <ThreeScene />
-      <div className={styles.overlay}>
-        <h1 className={styles.typing}>
-          {displayedText}
-          <span className={styles.cursor}>|</span>
-        </h1>
-        <motion.div
-          className={styles.ctaButtonGroup}
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <motion.button className={styles.ctaButton} variants={itemVariants}>
-            <Link href="/client-form" style={{ color: "inherit", textDecoration: "none" }}>
-            <FaCode style={{ marginRight: 8 }} />
-            Create Your Website or App
-            </Link>
-          </motion.button>
+      <motion.div
+        className={styles.aurora1}
+        animate={{
+          x: [0, 120, -80, 0],
+          y: [0, -60, 40, 0],
+          scale: [1, 1.25, 0.9, 1],
+          opacity: [0.28, 0.42, 0.32, 0.28],
+        }}
+        transition={{
+          duration: 32,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+      />
 
-          <motion.button
-            className={styles.scrollBtn}
-            onClick={scrollToNextSection}
-            variants={itemVariants}
+      <motion.div
+        className={styles.aurora2}
+        animate={{
+          x: [0, -100, 90, 0],
+          y: [0, 80, -50, 0],
+          scale: [1, 0.85, 1.15, 1],
+          opacity: [0.22, 0.36, 0.28, 0.22],
+        }}
+        transition={{
+          duration: 40,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+      />
+
+      <div className={styles.content}>
+        <AnimatePresence mode="wait">
+          <motion.h1
+            key={quoteIndex}
+            className={styles.typing}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{
+              duration: 0.45,
+              ease: "easeOut",
+            }}
           >
-            <FaChevronDown style={{ marginRight: 8 }} />
-            Scroll Down
-          </motion.button>
-        </motion.div>
+            {displayedText}
+          </motion.h1>
+        </AnimatePresence>
+
+        <motion.button className={styles.ctaButton} variants={itemVariants}>
+          <Link
+            href="/client-form"
+            style={{
+              color: "inherit",
+              textDecoration: "none",
+            }}
+          >
+            Create Your Website or App
+          </Link>
+        </motion.button>
       </div>
     </div>
   );

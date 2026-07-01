@@ -54,7 +54,7 @@ export default function Navbar() {
         <div className="navbar-logo">
           <Link href="/">
             <Image
-              src="/images/logo1.png"
+              src="/images/new-logo-1.jpg"
               alt="Phenomenal Logo"
               width={200}
               height={40}

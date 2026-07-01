@@ -21,6 +21,12 @@
   margin-bottom: 0.1rem;
 }
 
+.footer-registration {
+  font-size: 0.9rem;
+  color: #d4f2cc; /* Soft minty gray for contrast */
+  margin-left: 0.5rem;
+}
+
 .footer-text {
   font-size: 0.95rem;
   margin-bottom: 0.1rem;

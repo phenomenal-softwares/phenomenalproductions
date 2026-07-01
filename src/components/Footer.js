@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
-        <p className="footer-title">Phenomenal Productions</p>
+        <p className="footer-title">PHENOMENAL SOFTWARES NIG. LTD<span className="footer-registration">RC 9615166</span></p>
         <p className="footer-text">
           We believe that anyone can fly high and stand out with the right tools and
           support.
