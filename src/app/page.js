@@ -6,31 +6,27 @@ import HomeTestimonials from "@/components/HomeTestimonials/HomeTestimonials";
 import HomeCTA from "@/components/HomeCTA/HomeCTA";
 
 export const metadata = {
-  title: "Phenomenal Productions | Top-Tier Software Company in Nigeria",
+  title: "PHENOMENAL SOFTWARES NIG. LTD",
   description:
-    "We build elegant, scalable digital solutions for brands and businesses. Let’s turn your idea into a digital, global, product.",
+    "We build premium websites and mobile applications for brands and businesses.",
   alternates: {
     canonical: "https://phenomenalproductions.com.ng",
   },
   keywords: [
     "Phenomenal Productions",
-    "software development",
-    "web development",
-    "mobile app development",
+    "Phenomenal Softwares Nig. Ltd",
+    "Phenomenal Softwares",
     "Nigerian software company",
-    "digital products",
-    "custom software",
-    "web applications",
-    "mobile applications",
+    "web development Nigeria",
   ],
   robots: {
     index: true,
     follow: true,
   },
   openGraph: {
-    title: "Phenomenal Productions | Top-Tier Software Company in Nigeria",
+    title: "PHENOMENAL SOFTWARES NIG. LTD",
     description:
-      "Elegant, scalable web and mobile app development for Nigerian and global brands.",
+      "Nigerian software company specializing in web development, mobile applications, and digital solutions.",
     url: "https://phenomenalproductions.com.ng",
     siteName: "Phenomenal Productions",
     images: [

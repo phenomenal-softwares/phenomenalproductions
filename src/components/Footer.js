@@ -9,8 +9,8 @@ export default function Footer() {
       <div className="footer-container">
         <p className="footer-title">PHENOMENAL SOFTWARES NIG. LTD<span className="footer-registration">RC 9615166</span></p>
         <p className="footer-text">
-          We believe that anyone can fly high and stand out with the right tools and
-          support.
+          PHENOMENAL SOFTWARES NIG. LTD (Phenomenal Productions) is a registered company in Nigeria, providing innovative software solutions and services to clients across various industries. 
+          Our mission is to deliver high-quality software products that meet the evolving needs of our customers.
         </p>
         <p className="footer-copy">&copy; {currentYear} All rights reserved.</p>
         <p className="footer-links">

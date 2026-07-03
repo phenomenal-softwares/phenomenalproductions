@@ -5,39 +5,70 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import eagleLogo from "../../../public/images/logo2.png";
-import { FaRegistered } from "react-icons/fa";
 
 export default function HomeAbout() {
   return (
     <motion.section
       className={styles.aboutSection}
-      initial={{ opacity: 0, y: 50 }}
+      initial={{ opacity: 0, y: 60 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
     >
       <div className={styles.aboutContent}>
-        <div className={styles.logo}>
+        {/* Logo */}
+        <motion.div
+          className={styles.logoCard}
+          whileHover={{
+            y: -8,
+            rotate: -2,
+            scale: 1.03,
+          }}
+          transition={{ duration: 0.35 }}
+        >
           <Image
             src={eagleLogo}
+            alt="Phenomenal Logo"
             className={styles.eagleLogo}
-            alt="Phenomenal Productions Logo"
+            priority
           />
-        </div>
-        <div>
-          <div className={styles.headingRow}>
-            <h2>Who We Are</h2>
+        </motion.div>
+
+        {/* Company Identity */}
+        <div className={styles.companyInfo}>
+          <div className={styles.companyHeader}>
+            <div className={styles.rcBadge}>RC&nbsp;9615166</div>
+            <div className={styles.companyDetails}>
+              <h2 className={styles.companyName}>PHENOMENAL</h2>
+              <h3 className={styles.companyType}>Softwares Nig. Ltd</h3>
+              <p className={styles.brandName}>(Phenomenal Productions)</p>
+            </div>
+            
           </div>
-          <p>
-            At <strong>Phenomenal <FaRegistered /></strong>, we believe in standing
-            out — building powerful technology that works for everyone.
+
+          <h4 className={styles.tagline}>
+            Accessible Technology.
+            <br />
+            Exceptional Software.
+          </h4>
+
+          <p className={styles.description}>
+            We create premium digital experiences that empower businesses,
+            organizations, and individuals through modern websites, mobile
+            applications, business automation, and innovative software
+            solutions.
           </p>
-          <p className={styles.slogan}>
-            We build softwares for the <strong>Web</strong> and Mobile (
-            <strong>Android</strong> + <strong>iOS</strong>) platforms!
-          </p>
+
+          <div className={styles.services}>
+            <span>Web Applications</span>
+            <span>Mobile Apps</span>
+            <span>UI / UX Design</span>
+            <span>Business Automation</span>
+            <span>AI Solutions</span>
+          </div>
+
           <Link href="/about" className={styles.readMoreBtn}>
-            Learn More
+            Learn More →
           </Link>
         </div>
       </div>

@@ -40,20 +40,17 @@ const testimonials = [
   {
     name: "Mr. Habeeb Abdulkareem",
     title: "Founder, Habsag Studios",
-    phone: "+234 907 360 5341",
+    email: "ajagbe2001@gmail.com",
     photo: "/testimonials/abdulkareem.jpg",
     comment:
-      `As a trusted partner, they've consistently delivered top-notch software solutions that exceed expectations. 
-      If you're looking for a reliable software company that 
-      truly cares about your project's success, look no further than Phenomenal Productions. Highly recommended!`,
+      `As a trusted partner, they've consistently delivered softwares that exceed expectations. Highly recommended!`,
   },
   {
     name: "Prophet B. O. Oyesiji",
     title: "Lifelong Companion",
-    phone: "+234 701 328 3133",
+    email: "oyesijioyedamola@gmail.com",
     photo: "/testimonials/oyesiji.jpg",
-    comment: `I wholeheartedly recommend Phenomenal Productions for all your tech-related needs. With a proven track record of 
-    delivering high-quality digital solutions, their expertise and creativity shine through in every project.`,
+    comment: `Contact PHENOMENAL® for all your tech-related needs, as their expertise and creativity shine through in every project.`,
   },
 ];
 
@@ -98,7 +95,7 @@ export default function HomeTestimonials() {
               <div className={styles.clientInfo}>
                 <strong>{t.name}</strong>
                 <div>{t.title}</div>
-                <div>{t.phone}</div>
+                <div>{t.email}</div>
               </div>
             </div>
             <p className={styles.comment}>{t.comment}</p>

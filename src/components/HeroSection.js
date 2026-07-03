@@ -20,20 +20,6 @@ export default function HeroSection() {
   const [quoteIndex, setQuoteIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState(quotes[0]);
 
-  const containerVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut",
-        when: "beforeChildren",
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
@@ -95,7 +81,7 @@ export default function HeroSection() {
           x: [0, 120, -80, 0],
           y: [0, -60, 40, 0],
           scale: [1, 1.25, 0.9, 1],
-          opacity: [0.28, 0.42, 0.32, 0.28],
+          opacity: [0.56, 0.84, 0.64, 0.56],
         }}
         transition={{
           duration: 32,
@@ -110,7 +96,7 @@ export default function HeroSection() {
           x: [0, -100, 90, 0],
           y: [0, 80, -50, 0],
           scale: [1, 0.85, 1.15, 1],
-          opacity: [0.22, 0.36, 0.28, 0.22],
+          opacity: [0.56, 0.84, 0.64, 0.56],
         }}
         transition={{
           duration: 40,
