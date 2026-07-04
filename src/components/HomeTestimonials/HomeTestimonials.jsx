@@ -38,7 +38,7 @@ const logos = [
 
 const testimonials = [
   {
-    name: "Mr. Habeeb Abdulkareem",
+    name: "Habeeb Abdulkareem",
     title: "Founder, Habsag Studios",
     email: "ajagbe2001@gmail.com",
     photo: "/testimonials/abdulkareem.jpg",
@@ -46,10 +46,10 @@ const testimonials = [
       `As a trusted partner, they've consistently delivered softwares that exceed expectations. Highly recommended!`,
   },
   {
-    name: "Prophet B. O. Oyesiji",
-    title: "Lifelong Companion",
-    email: "oyesijioyedamola@gmail.com",
-    photo: "/testimonials/oyesiji.jpg",
+    name: "Oyedamola Oyesiji",
+    title: "Companion",
+    email: "oyesijioyedamola123@gmail.com",
+    photo: "/testimonials/oyedamola.jpg",
     comment: `Contact PHENOMENAL® for all your tech-related needs, as their expertise and creativity shine through in every project.`,
   },
 ];

@@ -2,6 +2,7 @@ import HeroSection from "@/components/HeroSection";
 import HomeAbout from "@/components/HomeAbout/HomeAbout";
 import VideoBackgroundSection from "@/components/VideoBackground/VideoBackgroundSection";
 import HomeProducts from "@/components/HomeProducts/HomeProducts";
+import GeneralPricingTable from "@/components/GeneralPricingTable/GeneralPricingTable";
 import HomeTestimonials from "@/components/HomeTestimonials/HomeTestimonials";
 import HomeCTA from "@/components/HomeCTA/HomeCTA";
 
@@ -55,6 +56,9 @@ export default function HomePage() {
       </div>
       <div id="products">
         <HomeProducts />
+      </div>
+      <div id="pricing">
+        <GeneralPricingTable />
       </div>
       <div id="testimonials">
         <HomeTestimonials />

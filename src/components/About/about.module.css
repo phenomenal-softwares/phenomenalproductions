@@ -3,22 +3,257 @@
   color: #0a6b8b; /* Kiwi Deep Blue for general text */
 }
 
-.hero {
-  position: relative;
-  height: 80vh;
+@font-face {
+  font-family: "Mars";
+  src: url("/fonts/Mars.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.aboutSection {
+  padding: 4rem 7%;
+  background: #050505;
+}
+
+.aboutContent {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem 0;
-  text-align: center;
-  overflow: hidden;
+  gap: 5rem;
+  max-width: 1000px;
+  margin: auto;
 }
 
-.logo {
-  width: 100%;
-  object-fit: contain;
-  z-index: 1;
+.logoCard {
+  flex-shrink: 0;
+
+  width: 340px;
+  height: 340px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.04),
+      rgba(255,255,255,.015)
+    );
+
+  border: 1px solid rgba(146,222,139,.15);
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,.45),
+    0 0 60px rgba(2,129,116,.15);
+  -webkit-backdrop-filter: blur(15px);  
+  backdrop-filter: blur(15px);
+
 }
+
+.eagleLogo {
+  width: 82%;
+  height: auto;
+  object-fit: contain;
+}
+
+.companyInfo {
+  flex: 1;
+}
+
+.companyHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.rcBadge {
+  flex-shrink: 0;
+  align-self: flex-end;
+  padding: .45rem 1rem;
+  border-radius: 999px;
+  background: rgba(2,129,116,.15);
+  border: 1px solid rgba(146,222,139,.4);
+  color: #92de8b;
+  font-size: .85rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  white-space: nowrap;
+}
+
+.companyDetails {
+  text-align: center;
+}
+
+.companyName {
+  font-family: "Mars", sans-serif;
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  line-height: .9;
+  color: white;
+  letter-spacing: .15em;
+  margin: 0;
+
+  text-shadow:
+    0 0 20px rgba(2,129,116,.35),
+    0 0 45px rgba(10,107,139,.15);
+}
+
+.companyType {
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .35em;
+  font-size: 1.3rem;
+}
+
+.brandName {
+  color: #92de8b;
+  font-size: 1.15rem;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.address {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #cfcfcf;
+  font-size: 1.05rem;
+  max-width: 700px;
+}
+
+.detailsIcon {
+  margin-right: .5rem;
+  color: #cfcfcf;
+}
+
+.services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .8rem;
+  margin-bottom: 2.5rem;
+}
+
+.services span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .7rem 1.2rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(146,222,139,.18);
+  color: white;
+  font-size: .9rem;
+  transition: .3s;
+}
+
+.services span:hover {
+  background: #028174;
+  border-color: #028174;
+  transform: translateY(-3px);
+}
+
+.readMoreBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  border-radius: 999px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  background:
+    linear-gradient(
+      135deg,
+      #028174,
+      #0a6b8b
+    );
+  box-shadow:
+    0 12px 35px rgba(2,129,116,.28);
+
+  transition: .35s;
+}
+
+.readMoreBtn:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 18px 50px rgba(2,129,116,.45);
+}
+
+@media (max-width: 992px) {
+  .aboutContent {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .companyInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .description {
+    max-width: 90%;
+  }
+
+  .services {
+    justify-content: center;
+  }
+
+  .logoCard {
+    width: 270px;
+    height: 270px;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutSection {
+    padding: 5rem 6%;
+  }
+
+  .companyinfo {
+    max-width: 90%;
+  }
+
+  .companyHeader {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .companyName {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+  }
+
+  .rcBadge {
+    align-self: center;
+  }
+
+  .companyType {
+    letter-spacing: .15em;
+    font-size: 1rem;
+  }
+
+  .tagline {
+    font-size: 1.35rem;
+  }
+
+  .services span {
+    font-size: .8rem;
+    padding: .6rem 1rem;
+  }
+}
+
+
 
 .section,
 .sectionAlt {

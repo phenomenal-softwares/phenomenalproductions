@@ -60,11 +60,11 @@ export default function HomeAbout() {
           </p>
 
           <div className={styles.services}>
-            <span>Web Applications</span>
+            <span>Websites</span>
             <span>Mobile Apps</span>
-            <span>UI / UX Design</span>
+            <span>Maintenance</span>
             <span>Business Automation</span>
-            <span>AI Solutions</span>
+            <span>Deployment</span>
           </div>
 
           <Link href="/about" className={styles.readMoreBtn}>

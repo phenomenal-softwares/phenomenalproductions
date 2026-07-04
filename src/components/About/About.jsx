@@ -7,8 +7,16 @@ import Link from "next/link";
 
 import FounderSection from "@/components/FounderSection/FounderSection";
 import eagleLogo from "../../../public/images/logo2.png";
-import phenomenalLogo from "../../../public/images/logo3.png";
-import { FaGlobe, FaAndroid, FaApple, FaEye } from "react-icons/fa";
+import {
+  FaGlobe,
+  FaLocationArrow,
+  FaMobileAlt,
+  FaEnvelope,
+  FaWrench,
+  FaCloudUploadAlt,
+  FaUserFriends,
+  FaCertificate,
+} from "react-icons/fa";
 
 // Animation variant
 const fadeInUp = {
@@ -21,27 +29,77 @@ export default function About() {
     <main className={styles.aboutMain}>
       {/* Hero Banner */}
       <motion.section
-        className={styles.hero}
-        initial="hidden"
-        whileInView="visible"
+        className={styles.aboutSection}
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        variants={fadeInUp}
       >
-        <Image
-          src={eagleLogo}
-          alt="Eagle soaring"
-          width={350}
-          className={styles.logo}
-        />
-        <Image
-          src={phenomenalLogo}
-          alt="phenomenal"
-          width={350}
-          className={styles.logo}
-        />
+        <div className={styles.aboutContent}>
+          {/* Logo */}
+          <motion.div
+            className={styles.logoCard}
+            whileHover={{
+              y: -8,
+              rotate: -2,
+              scale: 1.03,
+            }}
+            transition={{ duration: 0.35 }}
+          >
+            <Image
+              src={eagleLogo}
+              alt="Phenomenal Logo"
+              className={styles.eagleLogo}
+              priority
+            />
+          </motion.div>
+
+          {/* Company Identity */}
+          <div className={styles.companyInfo}>
+            <div className={styles.companyHeader}>
+              <div className={styles.rcBadge}>RC&nbsp;9615166</div>
+              <div className={styles.companyDetails}>
+                <h2 className={styles.companyName}>PHENOMENAL</h2>
+                <h3 className={styles.companyType}>Softwares Nig. Ltd</h3>
+                <p className={styles.brandName}>A.K.A Phenomenal Productions</p>
+                <p className={styles.address}>
+                  <FaLocationArrow className={styles.detailsIcon} />
+                  Ido-Ijesa, Ilesa, Osun State, Nigeria.
+                </p>
+                <p className={styles.address}>
+                  <FaEnvelope className={styles.detailsIcon} />
+                  info@phenomenalproductions.com.ng
+                </p>
+              </div>
+            </div>
+
+            <div className={styles.services}>
+              <span>
+                <FaGlobe className={styles.detailsIcon} />
+                Websites
+              </span>
+              <span>
+                <FaMobileAlt className={styles.detailsIcon} />
+                Mobile Apps
+              </span>
+              <span>
+                <FaWrench className={styles.detailsIcon} />
+                Maintenance
+              </span>
+              <span>
+                <FaCloudUploadAlt className={styles.detailsIcon} />
+                Deployment
+              </span>
+              <span>
+                <FaUserFriends className={styles.detailsIcon} />
+                Consultancy
+              </span>
+            </div>
+          </div>
+        </div>
       </motion.section>
 
-      {/* Philosophy */}
+      {/* Mission */}
       <motion.section
         className={styles.section}
         initial="hidden"
@@ -49,37 +107,14 @@ export default function About() {
         viewport={{ once: true }}
         variants={fadeInUp}
       >
-        <h2>Our Philosophy</h2>
+        <h2>Our Mission</h2>
         <p>
-          We exist to create solutions that are bold, reliable, accessible, and
-          transformative. Like the eagle, we rise above the noise, choosing
-          excellence over convenience and vision over trends. We believe that
-          anyone can fly high and stand out with the right tools and support.
+          We believe that everyone should have access to high-quality,
+          affordable softwares that empower them to achieve their
+          goals. Our mission therefore is to create accessible, user-friendly,
+          and cost-effective digital products that help individuals and
+          businesses thrive in the digital age.
         </p>
-      </motion.section>
-
-      <motion.section
-        className={styles.sectionAlt}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeInUp}
-      >
-        <h2>Services we proudly offer:</h2>
-        <ul className={styles.iconList}>
-          <li>
-            <FaGlobe className={styles.icon} />
-            <span>Websites</span>
-          </li>
-          <li>
-            <FaAndroid className={styles.icon} />
-            <span>Android Apps</span>
-          </li>
-          <li>
-            <FaApple className={styles.icon} />
-            <span>iOS Apps</span>
-          </li>
-        </ul>
       </motion.section>
 
       {/* Values */}
@@ -97,7 +132,7 @@ export default function About() {
         </p>
       </motion.section>
 
-      {/* Vision */}
+      {/* Registration */}
       <motion.section
         className={styles.sectionAlt}
         initial="hidden"
@@ -105,13 +140,14 @@ export default function About() {
         viewport={{ once: true }}
         variants={fadeInUp}
       >
-        <FaEye className={styles.icon} />
-        <h2>The Future We See</h2>
+        <FaCertificate className={styles.icon} />
+        <h2>We are a Registered Company</h2>
         <p>
-          We’re not just making apps and websites. We’re building tools for
-          people to live better, work smarter, and reach farther, making them
-          stand out in their fields — using tech that’s powerful yet simple and
-          accessible.
+          PHENOMENAL SOFTWARES NIG. LTD is registered as a Private Company
+          Limited by Shares under the Companies and Allied Matters Act (CAMA),
+          Federal Republic of Nigeria. The company is duly registered with the
+          Corporate Affairs Commission (CAC) and operates in compliance with all
+          relevant laws and regulations governing companies and businesses in Nigeria.
         </p>
       </motion.section>
 

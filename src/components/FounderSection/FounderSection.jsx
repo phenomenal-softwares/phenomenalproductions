@@ -34,23 +34,23 @@ export default function FounderSection() {
         </div>
 
         <div className={styles.founderBio}>
-          <h3>Abiodun Joseph Obaloluwa Ojo</h3>
-          <p className={styles.title}>Software Developer & Tech Entrepreneur</p>
+          <h3>ABIODUN OJO</h3>
+          <p className={styles.title}>
+            Director, Phenomenal Softwares Nig. Ltd
+          </p>
           <p className={styles.bioText}>
-            Abiodun is the visionary mind behind Phenomenal Productions. With a
+            Abiodun is the founder and visionary mind behind PHENOMENAL®. With a
             passion for problem-solving and a deep commitment to accessible
             technology, he has built a career crafting solutions that bridge the
             gap between people and possibility.
           </p>
+
           <p className={styles.bioText}>
-            Whether it's building intuitive apps or launching platforms that
-            make life easier, he brings clarity, speed, and precision — always
-            with an eye on excellence.
-          </p>
-          <p className={styles.bioText}>
-            Aside his dedication to the world of softwares, Abiodun is also a
-            Laboratory Technologist, Video Editor, Passionate Teacher,
-            Multilingual, and Guitarist. He is a lifelong learner and a lover of children.
+            Aside his dedication to the world of softwares, he is a Laboratory
+            Technologist, registered with the Nigerian Institute of Science
+            Laboratory Technology (NISLT), conducting research and practical
+            experiments in the university. He is also a 3D animator, an
+            educator, and a preacher.
           </p>
 
           <div className={styles.socialLinks}>
