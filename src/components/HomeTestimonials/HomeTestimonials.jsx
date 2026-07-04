@@ -39,7 +39,7 @@ const logos = [
 const testimonials = [
   {
     name: "Habeeb Abdulkareem",
-    title: "Founder, Habsag Studios",
+    title: "Habsag Studios",
     email: "ajagbe2001@gmail.com",
     photo: "/testimonials/abdulkareem.jpg",
     comment:
@@ -47,10 +47,10 @@ const testimonials = [
   },
   {
     name: "Oyedamola Oyesiji",
-    title: "Companion",
+    title: "Nigeria Police Force",
     email: "oyesijioyedamola123@gmail.com",
     photo: "/testimonials/oyedamola.jpg",
-    comment: `Contact PHENOMENAL® for all your tech-related needs, as their expertise and creativity shine through in every project.`,
+    comment: `Let PHENOMENAL® handle your tech needs, as their expertise and creativity shine through in every project.`,
   },
 ];
 

@@ -144,7 +144,7 @@ export default function About() {
         <h2>We are a Registered Company</h2>
         <p>
           PHENOMENAL SOFTWARES NIG. LTD is registered as a Private Company
-          Limited by Shares under the Companies and Allied Matters Act (CAMA),
+          Limited by Shares under the Companies and Allied Matters Act (CAMA) 2020,
           Federal Republic of Nigeria. The company is duly registered with the
           Corporate Affairs Commission (CAC) and operates in compliance with all
           relevant laws and regulations governing companies and businesses in Nigeria.

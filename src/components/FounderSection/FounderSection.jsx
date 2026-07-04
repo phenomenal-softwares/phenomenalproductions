@@ -39,9 +39,9 @@ export default function FounderSection() {
             Director, Phenomenal Softwares Nig. Ltd
           </p>
           <p className={styles.bioText}>
-            Abiodun is the founder and visionary mind behind PHENOMENAL®. With a
+            Abiodun is the founder and visionary mind behind PHENOMENAL®. With a deep
             passion for problem-solving and a deep commitment to accessible
-            technology, he has built a career crafting solutions that bridge the
+            technology, he has built a career delivering tech services that bridge the
             gap between people and possibility.
           </p>
 

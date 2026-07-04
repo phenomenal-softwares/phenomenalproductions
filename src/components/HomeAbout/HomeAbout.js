@@ -4,6 +4,13 @@ import styles from "./HomeAbout.module.css";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import {
+  FaGlobe,
+  FaMobileAlt,
+  FaWrench,
+  FaCloudUploadAlt,
+  FaUserFriends
+} from "react-icons/fa";
 import eagleLogo from "../../../public/images/logo2.png";
 
 export default function HomeAbout() {
@@ -60,12 +67,27 @@ export default function HomeAbout() {
           </p>
 
           <div className={styles.services}>
-            <span>Websites</span>
-            <span>Mobile Apps</span>
-            <span>Maintenance</span>
-            <span>Business Automation</span>
-            <span>Deployment</span>
-          </div>
+              <span>
+                <FaGlobe className={styles.detailsIcon} />
+                Websites
+              </span>
+              <span>
+                <FaMobileAlt className={styles.detailsIcon} />
+                Mobile Apps
+              </span>
+              <span>
+                <FaWrench className={styles.detailsIcon} />
+                Maintenance
+              </span>
+              <span>
+                <FaCloudUploadAlt className={styles.detailsIcon} />
+                Deployment
+              </span>
+              <span>
+                <FaUserFriends className={styles.detailsIcon} />
+                Consultancy
+              </span>
+            </div>
 
           <Link href="/about" className={styles.readMoreBtn}>
             Learn More →

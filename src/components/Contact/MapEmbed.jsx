@@ -27,7 +27,7 @@ export default function MapEmbed() {
           className={styles.mapFrame}
           allowFullScreen=""
           loading="lazy"
-          referrerpolicy="strict-origin-when-cross-origin"
+          referrerPolicy="strict-origin-when-cross-origin"
         ></iframe>
       </div>
     </motion.section>
