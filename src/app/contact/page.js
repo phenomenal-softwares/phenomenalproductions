@@ -3,17 +3,14 @@ import ContactInfo from "@/components/Contact/ContactInfo";
 import MapEmbed from "@/components/Contact/MapEmbed";
 
 export const metadata = {
-  title: "Contact Us | Phenomenal Productions",
-  description: "Reach out to Phenomenal Productions via email or phone. Let’s discuss your next project.",
+  title: "Contact Us | PHENOMENAL SOFTWARES NIG. LTD",
+  description: "Reach out to PHENOMENAL®, and Let's discuss your next project.",
   alternates: {
     canonical: "https://phenomenalproductions.com.ng/contact",
   },
   keywords: [
+    "Phenomenal Softwares",
     "Phenomenal Productions",
-    "contact us",
-    "software development",
-    "web development",
-    "mobile app development",
     "Nigerian software company",
     "contact information",
   ],
@@ -22,16 +19,16 @@ export const metadata = {
     follow: true,
   },
   openGraph: {
-    title: "Contact Phenomenal Productions",
+    title: "Contact PHENOMENAL SOFTWARES NIG. LTD",
     description: "Send us a message and let's get your project started today.",
     url: "https://phenomenalproductions.com.ng/contact",
-    siteName: "Phenomenal Productions",
+    siteName: "PHENOMENAL SOFTWARES NIG. LTD",
     images: [
       {
         url: "https://phenomenalproductions.com.ng/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Contact Phenomenal Productions",
+        alt: "Contact PHENOMENAL SOFTWARES NIG. LTD",
       },
     ],
     type: "website",

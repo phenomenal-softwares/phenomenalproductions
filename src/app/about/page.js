@@ -1,20 +1,16 @@
 import About from "@/components/About/About";
 
 export const metadata = {
-  title: "About Us | Phenomenal Productions",
-  description: "Learn about our mission, values, and the founder behind Phenomenal Productions.",
+  title: "About Us | PHENOMENAL SOFTWARES NIG. LTD",
+  description: "Learn about our mission, values, and why you should choose us.",
   alternates: {
     canonical: "https://phenomenalproductions.com.ng/about",
   },
   keywords: [
-    "About Phenomenal Productions",
+    "Phenomenal Softwares",
+    "PHENOMENAL SOFTWARES NIG. LTD",
+    "Phenomenal Productions",
     "Abiodun Ojo",
-    "Abiodun Joseph Ojo",
-    "software development",
-    "web development",
-    "mobile app development",
-    "Ojo Abiodun",
-    "Ojo Abiodun Joseph",
     "Nigerian software company",
     "digital products",
   ],
@@ -23,16 +19,16 @@ export const metadata = {
     follow: true,
   },
   openGraph: {
-    title: "About Phenomenal Productions",
-    description: "We’re passionate about building tech solutions that matter. Meet our founder Abiodun Ojo.",
+    title: "About PHENOMENAL SOFTWARES NIG. LTD",
+    description: "We believe that everyone should have access to high-quality, affordable softwares.",
     url: "https://phenomenalproductions.com.ng/about",
-    siteName: "Phenomenal Productions",
+    siteName: "PHENOMENAL SOFTWARES NIG. LTD",
     images: [
       {
         url: "https://phenomenalproductions.com.ng/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "About Phenomenal Productions",
+        alt: "About PHENOMENAL SOFTWARES NIG. LTD",
       },
     ],
     type: "profile",
