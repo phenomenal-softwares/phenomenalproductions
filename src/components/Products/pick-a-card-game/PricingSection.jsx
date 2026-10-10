@@ -29,7 +29,7 @@ export default function PricingSection() {
             height={400}
             className={styles.image}
             placeholder="blur"
-            blurDataURL="/images/pricing.png"
+            blurDataURL="/images/pricing.jpg"
           />
         </motion.div>
 
