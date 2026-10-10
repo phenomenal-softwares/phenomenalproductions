@@ -10,6 +10,9 @@ import {
 } from "react-icons/fa";
 import styles from "./GeneralPricingTable.module.css";
 
+const PRICING_TABLE_IMAGE_URL =
+  "https://firebasestorage.googleapis.com/v0/b/react-native-course-76661.firebasestorage.app/o/phenomenal-softwares%2Fpublic%2Fimages%2FGENERAL-PRICING-TABLE.png?alt=media&token=9e876fd5-58fc-46eb-8857-cd7f661abe7a";
+
 export default function GeneralPricingTable() {
   return (
     <section className={styles.section}>
@@ -54,7 +57,7 @@ export default function GeneralPricingTable() {
 
           <div className={styles.actions}>
             <a
-              href="/images/GENERAL-PRICING-TABLE.png"
+              href={PRICING_TABLE_IMAGE_URL}
               download
               className={styles.downloadBtn}
             >
@@ -80,7 +83,7 @@ export default function GeneralPricingTable() {
           viewport={{ once: true }}
         >
           <Image
-            src="/images/GENERAL-PRICING-TABLE.png"
+            src={PRICING_TABLE_IMAGE_URL}
             alt="Phenomenal Productions General Pricing Table"
             width={900}
             height={1200}

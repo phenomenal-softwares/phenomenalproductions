@@ -54,7 +54,7 @@ export default function Navbar() {
         <div className="navbar-logo">
           <Link href="/">
             <Image
-              src="/images/new-logo-1.jpg"
+              src="https://firebasestorage.googleapis.com/v0/b/react-native-course-76661.firebasestorage.app/o/phenomenal-softwares%2Fpublic%2Fimages%2Fnew-logo-1.jpg?alt=media&token=ec838a56-177e-4cec-9f0f-b5c3d813de47"
               alt="Phenomenal Logo"
               width={200}
               height={40}

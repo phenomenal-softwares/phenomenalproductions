@@ -1,139 +1,105 @@
-"use client";
-
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import styles from "./HeroSection.module.css";
 
-const quotes = [
-  "A website can make the whole world know about your business",
-  "You can own a mobile app that will be used by millions",
-  "Build digital products that connect with people",
-  "Transform your vision into world-class platforms",
-  "Let your organization speak on the web and beyond",
+const capabilities = [
+  "Websites & web applications",
+  "Mobile applications",
+  "Maintenance & support",
+  "E-commerce platforms",
+  "Cloud & API engineering",
+  "IT Consulting & strategy",
+  "Product strategy & discovery",
+  "Ongoing growth & support",
 ];
 
-const CHARACTERS =
-  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*<>?/[]{}";
+function CapabilityLoop() {
+  return (
+    <>
+      <ul className={styles.srOnly}>
+        {capabilities.map((capability) => (
+          <li key={capability}>{capability}</li>
+        ))}
+      </ul>
+      <div className={styles.marqueeWindow} aria-hidden="true">
+        <div className={styles.focusBand} />
+        <div className={styles.marqueeTrack}>
+          {[0, 1].map((copy) => (
+            <div className={styles.marqueeSet} key={copy}>
+              {capabilities.map((capability, index) => (
+                <div className={styles.capability} key={capability}>
+                  <span className={styles.capabilityIndex}>
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span className={styles.capabilityDot} />
+                  <span>{capability}</span>
+                  <span className={styles.capabilityArrow}>↗</span>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
+  );
+}
 
 export default function HeroSection() {
-  const [quoteIndex, setQuoteIndex] = useState(0);
-  const [displayedText, setDisplayedText] = useState(quotes[0]);
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-  };
-
-  // Scramble animation
-  useEffect(() => {
-    const target = quotes[quoteIndex];
-
-    let frame = 0;
-
-    // Every character gets a random reveal frame
-    const revealFrames = target.split("").map((char) => {
-      if (char === " ") return 0;
-      return Math.floor(Math.random() * 18) + 8;
-    });
-
-    const interval = setInterval(() => {
-      frame++;
-
-      const output = target
-        .split("")
-        .map((char, index) => {
-          if (char === " ") return " ";
-
-          if (frame >= revealFrames[index]) {
-            return char;
-          }
-
-          return CHARACTERS[Math.floor(Math.random() * CHARACTERS.length)];
-        })
-        .join("");
-
-      setDisplayedText(output);
-
-      if (frame > Math.max(...revealFrames)) {
-        clearInterval(interval);
-        setDisplayedText(target);
-      }
-    }, 45);
-
-    return () => clearInterval(interval);
-  }, [quoteIndex]);
-
-  // Rotate quotes
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setQuoteIndex((prev) => (prev + 1) % quotes.length);
-    }, 4200);
-
-    return () => clearInterval(timer);
-  }, []);
-
   return (
-    <div className={styles.heroWrapper}>
-      <motion.div
-        className={styles.aurora1}
-        animate={{
-          x: [0, 120, -80, 0],
-          y: [0, -60, 40, 0],
-          scale: [1, 1.25, 0.9, 1],
-          opacity: [0.56, 0.84, 0.64, 0.56],
-        }}
-        transition={{
-          duration: 32,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-      />
-
-      <motion.div
-        className={styles.aurora2}
-        animate={{
-          x: [0, -100, 90, 0],
-          y: [0, 80, -50, 0],
-          scale: [1, 0.85, 1.15, 1],
-          opacity: [0.56, 0.84, 0.64, 0.56],
-        }}
-        transition={{
-          duration: 40,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-      />
+    <section className={styles.hero} aria-labelledby="hero-title">
+      <div className={styles.ambientGlow} aria-hidden="true" />
+      <div className={styles.noise} aria-hidden="true" />
 
       <div className={styles.content}>
-        <AnimatePresence mode="wait">
-          <motion.h1
-            key={quoteIndex}
-            className={styles.typing}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{
-              duration: 0.45,
-              ease: "easeOut",
-            }}
-          >
-            {displayedText}
-          </motion.h1>
-        </AnimatePresence>
-
-        <motion.button className={styles.ctaButton} variants={itemVariants}>
-          <Link
-            href="/client-form"
-            style={{
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            Create Your Website or App
+        <div className={styles.copy}>
+          <Link className={styles.announcement} href="/products">
+            <span className={styles.announcementTag}>NOW BUILDING</span>
+            <span>Digital products made for real-world impact</span>
+            <span className={styles.announcementArrow} aria-hidden="true">
+              →
+            </span>
           </Link>
-        </motion.button>
+
+          <h1 className={styles.heading} id="hero-title">
+            We build software <span>that moves you forward.</span>
+          </h1>
+
+          <p className={styles.lead}>
+            Your next big idea deserves more than code. It deserves a digital
+            experience people love to use.
+          </p>
+          <p className={styles.supporting}>
+            From first sketch to launch and beyond, we turn ambitious ideas into
+            phenomenal websites, apps, and products.
+          </p>
+
+          <div className={styles.actions}>
+            <Link className={styles.primaryCta} href="/client-form">
+              Start a project <span aria-hidden="true">↗</span>
+            </Link>
+            <Link className={styles.secondaryCta} href="/products">
+              Explore our work <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+        </div>
+
+        <div className={styles.showcase}>
+          <div className={styles.showcaseHeader}>
+            <span className={styles.liveMark} aria-hidden="true" />
+            <span>ONE TEAM. EVERY DIGITAL LAYER.</span>
+            <span className={styles.showcaseMeta}>01 — 08</span>
+          </div>
+          <CapabilityLoop />
+          <div className={styles.showcaseFooter}>
+            <span>Thoughtfully engineered.</span>
+            <span>Built around your ambition.</span>
+          </div>
+        </div>
       </div>
-    </div>
+
+      <div className={styles.bottomNote} aria-hidden="true">
+        <span>PHENOMENAL SOFTWARES</span>
+        <span>IDEAS INTO IMPACT</span>
+      </div>
+    </section>
   );
 }
