@@ -24,6 +24,8 @@
 
 .grid {
   display: grid;
+  width: 100%;
+  max-width: 1200px;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 }
@@ -128,10 +130,36 @@
   box-shadow: 0 15px 30px rgba(0, 129, 116, 0.2); /* stronger on hover */
 }
 
+.imageFrame {
+  position: relative;
+  flex: 0 0 20%;
+  min-height: 120px;
+  overflow: hidden;
+  background: #eaf4ef;
+}
+
+.imageFallback {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #028174;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
 .image {
-  width: 20%;
-  height: auto;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.imageLoaded {
+  opacity: 1;
 }
 
 .cardContent {

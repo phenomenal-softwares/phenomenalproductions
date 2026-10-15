@@ -104,14 +104,14 @@
 
 .navbar-links li a {
   text-decoration: none;
-  color: #92de8b;
+  color: #92de8b; /* Light Kiwi Green */
   font-weight: 500;
   position: relative;
   transition: color 0.3s ease;
 }
 
 .navbar-links li a:hover {
-  color: #ffe3b3;
+  color: #ffe3b3; /* Light Yellow */
 }
 
 .navbar-links li a.active {

@@ -74,7 +74,7 @@ const products = [
     name: "Gatonegro: Number Guessing Game",
     description: "Train your brain with this fun number guessing game. Explore the world of Gatonegro!",
     image: "/images/homeproducts/product4.jpg",
-    type: "entertainment"
+    type: "game"
   },
   {
     id: "bible-guess",
@@ -93,7 +93,7 @@ const products = [
   {
     id: "rhodes-organic",
     name: "Rhodes Organic Essentials",
-    description: "An online shopping website with cool and natural interface.",
+    description: "An single-product shopping website with cool and natural interface.",
     image: "/images/homeproducts/product7.jpg",
     type: "e-commerce"
   },

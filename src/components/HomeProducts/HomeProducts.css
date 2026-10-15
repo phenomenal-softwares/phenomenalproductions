@@ -45,9 +45,34 @@
   /* Fallback for browsers that do not support -webkit-box-reflect */
   border: 2px solid #92de8b;
 }
+.card-loading {
+  background: linear-gradient(90deg, #028174 25%, #159b8e 50%, #028174 75%);
+  background-size: 200% 100%;
+  animation: product-skeleton 1.5s ease-in-out infinite;
+}
+.product-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 190px;
+  height: 190px;
+  object-fit: fill;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.product-image-loaded {
+  opacity: 1;
+}
 .cardb {
   background-color: #0a6b8b;
   opacity: 0.5;
+}
+
+@keyframes product-skeleton {
+  to {
+    background-position: -200% 0;
+  }
 }
 
 /* Positioning the cards */
@@ -126,5 +151,11 @@
 @media screen and (max-width: 992px) {
   .carousel {
     scale: 0.7;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-loading {
+    animation: none;
   }
 }

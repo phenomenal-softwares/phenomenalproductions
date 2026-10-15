@@ -1,35 +1,79 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import "./HomeProducts.css";
 import styles from "./HomeProducts.module.css";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { collection, getDocs, limit, orderBy, query } from "firebase/firestore";
+import { getDownloadURL, ref } from "firebase/storage";
+import { db, storage } from "../../../services/firebase";
 
 // Image imports
 import heroImg from "../../../public/images/homeproducts/product-hero.jpg";
-import pickACardGame from "../../../public/images/homeproducts/pick-a-card-game.jpeg";
-import moleculeVisualizer from "../../../public/images/homeproducts/molecule-visualizer.jpeg";
-import mantisWallet from "../../../public/images/homeproducts/mantis-wallet.jpeg";
-import ireoluwaunisex from "../../../public/images/homeproducts/ireoluwa-unisex.jpeg";
-import pepperandpalm from "../../../public/images/homeproducts/pepper-and-palm.jpg";
-import primeshelter from "../../../public/images/homeproducts/primeshelter.jpeg";
-import product12 from "../../../public/images/homeproducts/product12.jpeg";
-import product1 from "../../../public/images/homeproducts/product1.jpg";
-
-const images = [
-  pickACardGame,
-  moleculeVisualizer,
-  mantisWallet,
-  ireoluwaunisex,
-  pepperandpalm,
-  primeshelter,
-  product12,
-  product1,
-];
 
 export default function HomeProducts() {
+  const [products, setProducts] = useState([]);
+  const [loadedProductIds, setLoadedProductIds] = useState(() => new Set());
+
+  useEffect(() => {
+    let isMounted = true;
+
+    const loadProducts = async () => {
+      try {
+        const productsQuery = query(
+          collection(db, "products"),
+          orderBy("createdAt", "desc"),
+          limit(8),
+        );
+        const snapshot = await getDocs(productsQuery);
+        const latestProducts = await Promise.all(
+          snapshot.docs.map(async (productDoc) => {
+            const imagePath = productDoc.data().imagePrimary;
+
+            if (typeof imagePath !== "string" || imagePath.trim().length === 0) {
+              console.error(
+                `Firestore product ${productDoc.id} has no valid imagePrimary path.`,
+              );
+              return { id: productDoc.id, imageUrl: null };
+            }
+
+            try {
+              const imageUrl = await getDownloadURL(
+                ref(storage, imagePath.trim()),
+              );
+              return { id: productDoc.id, imageUrl };
+            } catch (error) {
+              console.error(
+                `Failed to resolve the Storage image for product ${productDoc.id}.`,
+                error,
+              );
+              return { id: productDoc.id, imageUrl: null };
+            }
+          }),
+        );
+
+        if (isMounted) {
+          setProducts(latestProducts);
+        }
+      } catch (error) {
+        console.error(
+          "Failed to fetch home product images from Firestore.",
+          error,
+        );
+      }
+    };
+
+    loadProducts();
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  const productSlots = Array.from({ length: 8 }, (_, index) => products[index]);
+
   return (
     <motion.section
       className={styles.productsSection}
@@ -51,7 +95,7 @@ export default function HomeProducts() {
         <div className={styles.heading}>
           <h2>Our Products</h2>
           <p>
-            From web platforms to exam tools and business solutions, and even
+            From web applications to exam tools and e-commerce platforms, and even
             games, our products are designed with the end-user in mind —
             intuitive, powerful, and accessible.
           </p>
@@ -61,17 +105,46 @@ export default function HomeProducts() {
       {/* Carousel */}
       <div className="carousel-section">
         <div className="carousel">
-          {images.map((img, i) => (
-            <React.Fragment key={i}>
-              <div
-                className={`card c${i + 1}`}
-                style={{
-                  backgroundImage: `url(${img.src})`,
-                }}
-              ></div>
-              <div className={`cardb cb${i + 1}`}></div>
-            </React.Fragment>
-          ))}
+          {productSlots.map((product, i) => {
+            const isLoaded = product && loadedProductIds.has(product.id);
+            const hasImageUrl =
+              typeof product?.imageUrl === "string" &&
+              product.imageUrl.length > 0;
+
+            return (
+              <React.Fragment key={product?.id ?? `product-slot-${i}`}>
+                <div
+                  className={`card c${i + 1}${isLoaded ? "" : " card-loading"}`}
+                >
+                  {hasImageUrl && (
+                    <Image
+                      src={product.imageUrl}
+                      alt=""
+                      width={190}
+                      height={190}
+                      unoptimized
+                      className={`product-image${
+                        isLoaded ? " product-image-loaded" : ""
+                      }`}
+                      onLoad={() => {
+                        setLoadedProductIds((loadedIds) => {
+                          const nextLoadedIds = new Set(loadedIds);
+                          nextLoadedIds.add(product.id);
+                          return nextLoadedIds;
+                        });
+                      }}
+                      onError={() => {
+                        console.error(
+                          `Failed to load the primary image for product ${product.id}.`,
+                        );
+                      }}
+                    />
+                  )}
+                </div>
+                <div className={`cardb cb${i + 1}`}></div>
+              </React.Fragment>
+            );
+          })}
         </div>
       </div>
 

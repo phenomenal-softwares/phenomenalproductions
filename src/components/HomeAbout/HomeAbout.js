@@ -9,7 +9,7 @@ import {
   FaMobileAlt,
   FaWrench,
   FaCloudUploadAlt,
-  FaUserFriends
+  FaUserFriends,
 } from "react-icons/fa";
 import eagleLogo from "../../../public/images/logo2.png";
 
@@ -34,8 +34,10 @@ export default function HomeAbout() {
           transition={{ duration: 0.35 }}
         >
           <Image
-            src={eagleLogo}
+            src="/images/phen-logo-eagle-bg-white.png"
             alt="Phenomenal Logo"
+            width={150}
+            height={150}
             className={styles.eagleLogo}
             priority
           />
@@ -50,7 +52,6 @@ export default function HomeAbout() {
               <h3 className={styles.companyType}>Softwares Nig. Ltd</h3>
               <p className={styles.brandName}>(Phenomenal Productions)</p>
             </div>
-            
           </div>
 
           <h4 className={styles.tagline}>
@@ -67,27 +68,27 @@ export default function HomeAbout() {
           </p>
 
           <div className={styles.services}>
-              <span>
-                <FaGlobe className={styles.detailsIcon} />
-                Websites
-              </span>
-              <span>
-                <FaMobileAlt className={styles.detailsIcon} />
-                Mobile Apps
-              </span>
-              <span>
-                <FaWrench className={styles.detailsIcon} />
-                Maintenance
-              </span>
-              <span>
-                <FaCloudUploadAlt className={styles.detailsIcon} />
-                Deployment
-              </span>
-              <span>
-                <FaUserFriends className={styles.detailsIcon} />
-                Consultancy
-              </span>
-            </div>
+            <span>
+              <FaGlobe className={styles.detailsIcon} />
+              Websites
+            </span>
+            <span>
+              <FaMobileAlt className={styles.detailsIcon} />
+              Mobile Apps
+            </span>
+            <span>
+              <FaWrench className={styles.detailsIcon} />
+              Maintenance
+            </span>
+            <span>
+              <FaCloudUploadAlt className={styles.detailsIcon} />
+              Deployment
+            </span>
+            <span>
+              <FaUserFriends className={styles.detailsIcon} />
+              Consultancy
+            </span>
+          </div>
 
           <Link href="/about" className={styles.readMoreBtn}>
             Learn More →

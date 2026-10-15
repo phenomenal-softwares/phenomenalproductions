@@ -6,7 +6,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 import FounderSection from "@/components/FounderSection/FounderSection";
-import eagleLogo from "../../../public/images/logo2.png";
 import {
   FaGlobe,
   FaLocationArrow,
@@ -47,8 +46,10 @@ export default function About() {
             transition={{ duration: 0.35 }}
           >
             <Image
-              src={eagleLogo}
+              src="/images/phen-logo-eagle-bg-white.png"
               alt="Phenomenal Logo"
+              width={150}
+              height={150}
               className={styles.eagleLogo}
               priority
             />

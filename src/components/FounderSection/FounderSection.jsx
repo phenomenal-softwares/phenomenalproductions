@@ -3,11 +3,11 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import styles from "./FounderSection.module.css";
+import { FaXTwitter } from "react-icons/fa6";
 import {
   FaLinkedin,
   FaFacebook,
   FaEnvelope,
-  FaArrowRight,
 } from "react-icons/fa";
 
 export default function FounderSection() {
@@ -24,7 +24,7 @@ export default function FounderSection() {
       <div className={styles.founderGrid}>
         <div className={styles.imageWrapper}>
           <Image
-            src="/images/portrait.png"
+            src="/images/ojo-portrait-bg-white.jpg"
             alt="Abiodun Ojo"
             width={400}
             height={400}
@@ -70,16 +70,7 @@ export default function FounderSection() {
               rel="noopener noreferrer"
               className={styles.xLink}
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 1200 1227"
-                width="24"
-                height="24"
-                fill="currentColor"
-                className={styles.xIcon}
-              >
-                <path d="M1227 0H1005L613 486 221 0H0L464 610 0 1227h222l391-516 391 516h223L763 615 1227 0Z" />
-              </svg>
+              <FaXTwitter className={styles.xIcon} />
             </a>
             <a
               href="https://www.facebook.com/abiodun.ojo.7505"
