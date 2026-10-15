@@ -10,9 +10,6 @@ import { collection, getDocs, limit, orderBy, query } from "firebase/firestore";
 import { getDownloadURL, ref } from "firebase/storage";
 import { db, storage } from "../../../services/firebase";
 
-// Image imports
-import heroImg from "../../../public/images/homeproducts/product-hero.jpg";
-
 export default function HomeProducts() {
   const [products, setProducts] = useState([]);
   const [loadedProductIds, setLoadedProductIds] = useState(() => new Set());
@@ -86,10 +83,13 @@ export default function HomeProducts() {
       <div className={styles.headerSection}>
         <div className={styles.left}>
           <Image
-            src={heroImg}
+            src="/images/homeProduct-hero.jpg"
+            width={400}
+            height={300}
             alt="Innovation"
             className={styles.heroImage}
             placeholder="blur"
+            blurDataURL="/images/homeProduct-hero.jpg"
           />
         </div>
         <div className={styles.heading}>
