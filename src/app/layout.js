@@ -13,15 +13,15 @@ const inter = Inter({
 
 export const metadata = {
   title: {
-    default: "Phenomenal Productions",
-    template: "%s | Phenomenal Productions",
+    default: "PHENOMENAL SOFTWARES NIG. LTD",
+    template: "%s | PHENOMENAL SOFTWARES NIG. LTD",
   },
   description:
-    "Phenomenal Productions is a leading Nigerian software company specializing in custom website development and mobile app solutions for Android and iOS platforms. Discover innovative digital solutions tailored to your needs.",
+    "PHENOMENAL SOFTWARES NIG. LTD is a leading Nigerian software company specializing in custom website development and mobile app solutions for Android and iOS platforms. Discover innovative digital solutions tailored to your needs.",
   keywords: [
+    "PHENOMENAL SOFTWARES NIG. LTD",
     "Phenomenal Productions",
-    "software development Nigeria",
-    "web development",
+    "Phenoemal Softwares",
     "web apps",
     "app development",
     "Abiodun Ojo",
@@ -34,30 +34,30 @@ export const metadata = {
   ],
   metadataBase: new URL("https://phenomenalproductions.com.ng"),
   openGraph: {
-    title: "Phenomenal Productions",
+    title: "PHENOMENAL SOFTWARES NIG. LTD",
     description:
       "Custom digital platforms for institutions and entrepreneurs — from full-stack web apps to native Android and iOS apps.",
     url: "https://phenomenalproductions.com.ng",
-    siteName: "Phenomenal Productions",
+    siteName: "PHENOMENAL SOFTWARES NIG. LTD",
     images: [
       {
         url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Phenomenal Productions - Custom Digital Platforms",
+        alt: "PHENOMENAL SOFTWARES NIG. LTD - Custom Digital Platforms",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Phenomenal Productions",
+    title: "PHENOMENAL SOFTWARES NIG. LTD",
     description:
-      "Explore digital excellence with Phenomenal Productions — smart apps, exam tools, lots more.",
+      "Explore digital excellence with PHENOMENAL SOFTWARES NIG. LTD — smart apps, exam tools, lots more.",
     images: ["/images/og-image.jpg"],
   },
   authors: [{ name: "Abiodun Ojo", url: "https://abiodunojo.vercel.app" }],
-  creator: "Phenomenal Productions",
+  creator: "PHENOMENAL SOFTWARES NIG. LTD",
   icons: {
     icon: "/favicon.png",
     shortcut: "/logo.ico",

@@ -4,9 +4,13 @@ import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import styles from "./LoadingOverlay.module.css";
 
-export default function LoadingOverlay({ isLoading, label = "Loading" }) {
+export default function LoadingOverlay({
+  isLoading,
+  label = "Loading",
+  onExitComplete,
+}) {
   return (
-    <AnimatePresence>
+    <AnimatePresence onExitComplete={onExitComplete}>
       {isLoading && (
         <motion.div
           className={styles.overlay}

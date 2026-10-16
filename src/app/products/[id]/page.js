@@ -41,6 +41,13 @@ const colorProperties = {
   warningBg: ["warningBg", "warning-bg"],
 };
 
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}
+
 async function resolveStorageAsset(path) {
   if (typeof path !== "string" || !path.trim()) return null;
 
@@ -48,6 +55,17 @@ async function resolveStorageAsset(path) {
   if (/^(https?:\/\/|\/|data:)/i.test(assetPath)) return assetPath;
 
   return getDownloadURL(ref(storage, assetPath));
+}
+
+async function resolveReadMeAsset(path) {
+  if (typeof path !== "string" || !path.trim()) return null;
+
+  const assetPath = path.trim();
+  if (/^(https?:\/\/|data:)/i.test(assetPath) || /^\/readmes\//i.test(assetPath)) {
+    return assetPath;
+  }
+
+  return getDownloadURL(ref(storage, assetPath.replace(/^\/+/, "")));
 }
 
 function preloadImage(url) {
@@ -88,10 +106,11 @@ async function loadProduct(productId) {
     throw new Error(`Product ${productId} has an invalid gallery.`);
   }
 
-  const [imagePrimary, imagePhone, gallery] = await Promise.all([
+  const [imagePrimary, imagePhone, gallery, readMe] = await Promise.all([
     resolveStorageAsset(data.imagePrimary),
     resolveStorageAsset(data.imagePhone),
     Promise.all(galleryPaths.map(resolveStorageAsset)),
+    resolveReadMeAsset(data.readMe),
   ]);
 
   return {
@@ -100,6 +119,7 @@ async function loadProduct(productId) {
     imagePrimary,
     imagePhone,
     gallery: gallery.filter(Boolean),
+    readMe,
   };
 }
 
@@ -149,6 +169,7 @@ export default function ProductInfoPage() {
 
         setProduct(loadedProduct);
         setStatus("ready");
+        scrollToTop();
       } catch (error) {
         console.error(`Failed to load product ${id} from Firestore.`, error);
         if (isMounted) setStatus("error");
@@ -156,6 +177,7 @@ export default function ProductInfoPage() {
     }
 
     load();
+    scrollToTop();
 
     return () => {
       isMounted = false;
@@ -172,6 +194,7 @@ export default function ProductInfoPage() {
       <LoadingOverlay
         isLoading={status === "loading"}
         label="Loading product"
+        onExitComplete={() => window.scrollTo(0, 0)}
       />
       {status === "not-found" ? (
         <main>Product not found.</main>

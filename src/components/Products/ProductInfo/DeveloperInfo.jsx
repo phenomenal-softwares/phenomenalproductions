@@ -21,6 +21,9 @@ function formatValue(value) {
 
 function DeveloperInfo({ product }) {
   const developerInfo = product.developerInfo ?? {};
+  const readMeUrl = product.readMe?.startsWith("/")
+    ? product.readMe
+    : `/api/readme?url=${encodeURIComponent(product.readMe)}`;
 
   return (
     <section className={styles.devSection}>
@@ -59,8 +62,8 @@ info@phenomenalproductions.com.ng`}
 
       {product.readMe && (
         <a
-          href={product.readMe}
-          download
+          href={readMeUrl}
+          download="README.md"
           className={styles.downloadBtn}
         >
           Download README

@@ -13,6 +13,13 @@ import LoadingOverlay from "../LoadingOverlay/LoadingOverlay";
 
 const DESCRIPTION_WORD_LIMIT = 14;
 
+function ScrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}
+
 function getShortDescription(description) {
   if (typeof description !== "string") return "";
 
@@ -84,6 +91,7 @@ export default function Products() {
       } finally {
         if (isMounted) {
           setHasFetchedProducts(true);
+          ScrollToTop();
         }
       }
     };
@@ -134,7 +142,11 @@ export default function Products() {
 
   return (
     <>
-      <LoadingOverlay isLoading={isLoading} label="Loading products" />
+      <LoadingOverlay
+        isLoading={isLoading}
+        label="Loading products"
+        onExitComplete={ScrollToTop}
+      />
       <main className={styles.main}>
         <motion.h1
           className={styles.title}
