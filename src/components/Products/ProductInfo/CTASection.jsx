@@ -1,12 +1,17 @@
 "use client";
 
+import { useEffect } from "react";
 import styles from "./CTASection.module.css";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { FaGlobe, FaCode } from "react-icons/fa";
 
-export default function CTASection({ product }) {
+export default function CTASection({ product, onReady }) {
   const isGame = product.type === "game";
+
+  useEffect(() => {
+    onReady?.();
+  }, [onReady]);
 
   return (
     <motion.section

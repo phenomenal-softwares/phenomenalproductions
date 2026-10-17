@@ -1,11 +1,16 @@
 "use client";
 
+import { useEffect } from "react";
 import styles from "./FeaturesSection.module.css";
 import { motion } from "framer-motion";
 import * as featureIcons from "react-icons/fa";
 
-export default function FeaturesSection({ product }) {
+export default function FeaturesSection({ product, onReady }) {
   const features = Array.isArray(product.features) ? product.features : [];
+
+  useEffect(() => {
+    onReady?.();
+  }, [onReady]);
 
   return (
     <section className={styles.featuresSection}>

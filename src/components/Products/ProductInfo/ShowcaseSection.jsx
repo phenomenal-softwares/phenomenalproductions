@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./ShowcaseSection.module.css";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -8,9 +8,13 @@ import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import { FaImages } from "react-icons/fa";
 
-export default function ShowcaseSection({ product }) {
+export default function ShowcaseSection({ product, onReady, onError }) {
   const [open, setOpen] = useState(false);
   const gallery = product.gallery ?? [];
+
+  useEffect(() => {
+    if (gallery.length === 0) onReady?.();
+  }, [gallery.length, onReady]);
 
   if (gallery.length === 0) return null;
 
@@ -37,6 +41,8 @@ export default function ShowcaseSection({ product }) {
           width={800}
           height={500}
           className={styles.image}
+          onLoad={() => onReady?.()}
+          onError={() => onError?.(new Error("Failed to load product showcase image."))}
         />
         <div className={styles.overlay}>
           <FaImages className={styles.overlayIcon} />

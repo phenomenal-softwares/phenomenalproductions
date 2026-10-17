@@ -1,12 +1,29 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import styles from "./ProductsHero.module.css";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { FaGlobe } from "react-icons/fa";
 
-export default function ProductsHero({ product }) {
+export default function ProductsHero({ product, onReady, onError }) {
   const isGame = product.type === "game";
+  const imageCount = Number(Boolean(product.imagePrimary)) +
+    Number(Boolean(product.imagePhone));
+  const loadedImages = useRef(new Set());
+
+  useEffect(() => {
+    if (imageCount === 0) onReady?.();
+  }, [imageCount, onReady]);
+
+  function handleImageLoad(imageName) {
+    loadedImages.current.add(imageName);
+    if (loadedImages.current.size === imageCount) onReady?.();
+  }
+
+  function handleImageError(imageName) {
+    onError?.(new Error(`Failed to load product ${imageName} image.`));
+  }
 
   return (
     <section className={styles.heroSection}>
@@ -17,6 +34,8 @@ export default function ProductsHero({ product }) {
           className={styles.bgImage}
           fill
           priority
+          onLoad={() => handleImageLoad("primary")}
+          onError={() => handleImageError("primary")}
         />
       )}
 
@@ -34,6 +53,8 @@ export default function ProductsHero({ product }) {
               width={360 / 1.75}
               height={780 / 1.75}
               className={styles.imagePhone}
+              onLoad={() => handleImageLoad("phone")}
+              onError={() => handleImageError("phone")}
             />
           </motion.div>
         )}

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import styles from "./DeveloperInfo.module.css";
 
 const developerFields = [
@@ -19,11 +20,15 @@ function formatValue(value) {
   return null;
 }
 
-function DeveloperInfo({ product }) {
+function DeveloperInfo({ product, onReady }) {
   const developerInfo = product.developerInfo ?? {};
   const readMeUrl = product.readMe?.startsWith("/")
     ? product.readMe
     : `/api/readme?url=${encodeURIComponent(product.readMe)}`;
+
+  useEffect(() => {
+    onReady?.();
+  }, [onReady]);
 
   return (
     <section className={styles.devSection}>

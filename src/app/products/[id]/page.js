@@ -1,17 +1,17 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { useParams } from "next/navigation";
 import { doc, getDoc } from "firebase/firestore";
 import { getDownloadURL, ref } from "firebase/storage";
 import { db, storage } from "../../../../services/firebase";
-import LoadingOverlay from "@/components/LoadingOverlay/LoadingOverlay";
 import ProductsHero from "@/components/Products/ProductInfo/ProductsHero";
 import FeaturesSection from "@/components/Products/ProductInfo/FeaturesSection";
 import ShowcaseSection from "@/components/Products/ProductInfo/ShowcaseSection";
 import PricingSection from "@/components/Products/ProductInfo/PricingSection";
 import CTASection from "@/components/Products/ProductInfo/CTASection";
 import DeveloperInfo from "@/components/Products/ProductInfo/DeveloperInfo";
+import ProductSection from "./ProductSection";
 
 const defaultColors = {
   primary: "#FF2E63",
@@ -66,27 +66,6 @@ async function resolveReadMeAsset(path) {
   }
 
   return getDownloadURL(ref(storage, assetPath.replace(/^\/+/, "")));
-}
-
-function preloadImage(url) {
-  return new Promise((resolve, reject) => {
-    const image = new window.Image();
-    const handleLoad = () => image.decode().then(resolve, reject);
-    const handleError = () =>
-      reject(new Error(`Failed to load product image: ${url}`));
-
-    image.onload = handleLoad;
-    image.onerror = handleError;
-    image.src = url;
-
-    if (image.complete) {
-      if (image.naturalWidth === 0) {
-        handleError();
-      } else {
-        handleLoad();
-      }
-    }
-  });
 }
 
 async function loadProduct(productId) {
@@ -159,14 +138,6 @@ export default function ProductInfoPage() {
           return;
         }
 
-        const assets = [
-          loadedProduct.imagePrimary,
-          loadedProduct.imagePhone,
-          ...loadedProduct.gallery,
-        ].filter(Boolean);
-        await Promise.all([...new Set(assets)].map(preloadImage));
-        if (!isMounted) return;
-
         setProduct(loadedProduct);
         setStatus("ready");
         scrollToTop();
@@ -188,32 +159,69 @@ export default function ProductInfoPage() {
     () => getColorStyle(product?.colors),
     [product?.colors],
   );
+  const handleSectionLoadError = useCallback(() => {
+    setStatus("error");
+  }, []);
 
   return (
-    <>
-      <LoadingOverlay
-        isLoading={status === "loading"}
-        label="Loading product"
-        onExitComplete={() => window.scrollTo(0, 0)}
-      />
+    <main
+      style={colorStyle}
+      aria-live={status === "loading" ? "polite" : undefined}
+    >
       {status === "not-found" ? (
-        <main>Product not found.</main>
+        "Product not found."
       ) : status === "error" ? (
-        <main role="alert">
+        <p role="alert">
           Unable to load this product. Please try again later.
-        </main>
-      ) : status === "ready" ? (
-        <main style={colorStyle}>
-          <ProductsHero product={product} />
-          <FeaturesSection product={product} />
-          <ShowcaseSection product={product} />
-          <PricingSection product={product} />
-          <CTASection product={product} />
-          <DeveloperInfo product={product} />
-        </main>
+        </p>
       ) : (
-        <main aria-live="polite" />
+        <>
+          <ProductSection
+            key={`${id}-hero`}
+            section="hero"
+            product={product}
+            Component={ProductsHero}
+            onLoadError={handleSectionLoadError}
+          />
+          <ProductSection
+            key={`${id}-features`}
+            section="features"
+            product={product}
+            Component={FeaturesSection}
+            onLoadError={handleSectionLoadError}
+          />
+          {(!product || product.gallery.length > 0) && (
+            <ProductSection
+              key={`${id}-showcase`}
+              section="showcase"
+              product={product}
+              Component={ShowcaseSection}
+              onLoadError={handleSectionLoadError}
+            />
+          )}
+          <ProductSection
+            key={`${id}-pricing`}
+            section="pricing"
+            product={product}
+            Component={PricingSection}
+            onLoadError={handleSectionLoadError}
+          />
+          <ProductSection
+            key={`${id}-cta`}
+            section="cta"
+            product={product}
+            Component={CTASection}
+            onLoadError={handleSectionLoadError}
+          />
+          <ProductSection
+            key={`${id}-developer`}
+            section="developer"
+            product={product}
+            Component={DeveloperInfo}
+            onLoadError={handleSectionLoadError}
+          />
+        </>
       )}
-    </>
+    </main>
   );
 }

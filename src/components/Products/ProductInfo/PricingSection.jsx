@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { FaWhatsapp } from "react-icons/fa";
 
-export default function PricingSection() {
+export default function PricingSection({ onReady, onError }) {
   return (
     <motion.section
       className={styles.pricingSection}
@@ -30,6 +30,10 @@ export default function PricingSection() {
             className={styles.image}
             placeholder="blur"
             blurDataURL="/images/pricing.jpg"
+            onLoad={() => onReady?.()}
+            onError={() =>
+              onError?.(new Error("Failed to load the pricing section image."))
+            }
           />
         </motion.div>
 
