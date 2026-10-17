@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FaLocationArrow, FaLongArrowAltRight } from "react-icons/fa";
 import styles from "./HeroSection.module.css";
 
 const capabilities = [
@@ -55,7 +56,7 @@ export default function HeroSection() {
             <span className={styles.announcementTag}>NOW BUILDING</span>
             <span>Digital products made for real-world impact</span>
             <span className={styles.announcementArrow} aria-hidden="true">
-              →
+              <FaLongArrowAltRight className={styles.icon} />
             </span>
           </Link>
 
@@ -74,10 +75,16 @@ export default function HeroSection() {
 
           <div className={styles.actions}>
             <Link className={styles.primaryCta} href="/client-form">
-              Start a project <span aria-hidden="true">↗</span>
+              Start a project
+              <span aria-hidden="true">
+                <FaLocationArrow className={styles.icon} />
+              </span>
             </Link>
             <Link className={styles.secondaryCta} href="/products">
-              Explore our work <span aria-hidden="true">→</span>
+              Explore our work{" "}
+              <span aria-hidden="true">
+                <FaLongArrowAltRight className={styles.icon} />
+              </span>
             </Link>
           </div>
         </div>

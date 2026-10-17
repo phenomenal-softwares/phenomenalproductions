@@ -13,6 +13,10 @@
   color: #f5fbf8;
 }
 
+.icon {
+  margin-right: 0.5rem;
+}
+
 .ambientGlow {
   position: absolute;
   z-index: -1;
@@ -61,6 +65,7 @@
   display: inline-flex;
   max-width: 100%;
   align-items: center;
+  justify-content: center;
   gap: 0.75rem;
   margin-bottom: clamp(1.7rem, 4vw, 2.6rem);
   padding: 0.55rem 0.8rem;
@@ -92,6 +97,9 @@
 .announcementArrow {
   color: #92de8b;
   font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .heading {
@@ -174,6 +182,13 @@
   background: rgba(255, 255, 255, 0.08);
 }
 
+.primaryCta span,
+.secondaryCta span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .showcase {
   position: relative;
   min-width: 0;
@@ -233,8 +248,8 @@
   mask-image: linear-gradient(
     to bottom,
     transparent 0%,
-    #000 17%,
-    #000 83%,
+    #000 25%,
+    #000 75%,
     transparent 100%
   );
 }
@@ -259,7 +274,7 @@
 }
 
 .marqueeTrack {
-  animation: marquee-up 30s linear infinite;
+  animation: marquee-up 20s linear infinite;
   will-change: transform;
 }
 
