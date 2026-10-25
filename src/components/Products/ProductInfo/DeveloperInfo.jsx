@@ -5,7 +5,7 @@ const developerFields = [
   ["mode", "Mode"],
   ["targetPlatforms", "Target Platforms"],
   ["languages", "Language"],
-  ["framework", "Framework"],
+  ["framework", "Framework/Libraries/Storage"],
   ["styling", "Styling"],
   ["animation", "Animations"],
   ["icons", "Icons"],
@@ -51,14 +51,14 @@ function DeveloperInfo({ product, onReady }) {
 
       <div className={styles.codeBlock}>
         <code>
-          {`© Phenomenal Productions. All rights reserved.
-This software, including its source code, assets, game mechanics,
+          {`© Phenomenal Softwares Nig. Ltd. All rights reserved.
+This software, including its source code, assets,
 and design elements, is proprietary and confidential.
 
 Unauthorized copying, reuse, redistribution, modification,
 or commercial exploitation of any part of this project
 is strictly prohibited without prior written permission
-from Phenomenal Productions.
+from Phenomenal Softwares Nig. Ltd.
 
 For inquiries, partnerships, or licensing requests:
 info@phenomenalproductions.com.ng`}

@@ -1,33 +1,39 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./ProductsHero.module.css";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { FaGlobe } from "react-icons/fa";
 
-export default function ProductsHero({ product, onReady, onError }) {
+export default function ProductsHero({ product, onReady }) {
   const isGame = product.type === "game";
   const imageCount = Number(Boolean(product.imagePrimary)) +
     Number(Boolean(product.imagePhone));
   const loadedImages = useRef(new Set());
+  const [failedImages, setFailedImages] = useState({});
 
   useEffect(() => {
     if (imageCount === 0) onReady?.();
   }, [imageCount, onReady]);
 
   function handleImageLoad(imageName) {
+    if (loadedImages.current.has(imageName)) return;
     loadedImages.current.add(imageName);
     if (loadedImages.current.size === imageCount) onReady?.();
   }
 
   function handleImageError(imageName) {
-    onError?.(new Error(`Failed to load product ${imageName} image.`));
+    console.warn(
+      `Product ${imageName} image is unavailable. The product details will still be shown.`,
+    );
+    setFailedImages((current) => ({ ...current, [imageName]: true }));
+    handleImageLoad(imageName);
   }
 
   return (
     <section className={styles.heroSection}>
-      {product.imagePrimary && (
+      {product.imagePrimary && !failedImages.primary && (
         <Image
           src={product.imagePrimary}
           alt={`${product.name} background`}
@@ -40,7 +46,7 @@ export default function ProductsHero({ product, onReady, onError }) {
       )}
 
       <div className={styles.heroWrapper}>
-        {product.imagePhone && (
+        {product.imagePhone && !failedImages.phone && (
           <motion.div
             className={styles.heroImagePhoneWrapper}
             initial={{ opacity: 0, scale: 0.95 }}

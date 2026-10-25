@@ -6,6 +6,7 @@ import { doc, getDoc } from "firebase/firestore";
 import { getDownloadURL, ref } from "firebase/storage";
 import { db, storage } from "../../../../services/firebase";
 import ProductsHero from "@/components/Products/ProductInfo/ProductsHero";
+import AdditionalInformation from "@/components/Products/ProductInfo/AdditionalInformation";
 import FeaturesSection from "@/components/Products/ProductInfo/FeaturesSection";
 import ShowcaseSection from "@/components/Products/ProductInfo/ShowcaseSection";
 import PricingSection from "@/components/Products/ProductInfo/PricingSection";
@@ -188,6 +189,13 @@ export default function ProductInfoPage() {
             section="features"
             product={product}
             Component={FeaturesSection}
+            onLoadError={handleSectionLoadError}
+          />
+          <ProductSection
+            key={`${id}-additional-information`}
+            section="additionalInformation"
+            product={product}
+            Component={AdditionalInformation}
             onLoadError={handleSectionLoadError}
           />
           {(!product || product.gallery.length > 0) && (

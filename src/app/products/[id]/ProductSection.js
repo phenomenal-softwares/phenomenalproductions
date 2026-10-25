@@ -8,6 +8,7 @@ import styles from "./ProductSection.module.css";
 const skeletonCount = {
   hero: 1,
   features: 3,
+  additionalInformation: 1,
   showcase: 1,
   pricing: 1,
   cta: 2,
