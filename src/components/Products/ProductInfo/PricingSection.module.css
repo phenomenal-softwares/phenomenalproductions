@@ -2,7 +2,7 @@
   padding: 5rem 2rem;
   background: linear-gradient(to right, var(--bg), #fff);
   border-radius: 12px;
-  margin: 4rem auto;
+  margin: 2rem auto;
   max-width: 1200px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
 }
@@ -79,7 +79,7 @@
 @media (max-width: 768px) {
   .pricingSection {
     padding: 3rem 1.5rem;
-    margin: 3rem 1rem;
+    margin: 1.5rem 1rem;
   }
 
   .contentWrapper {

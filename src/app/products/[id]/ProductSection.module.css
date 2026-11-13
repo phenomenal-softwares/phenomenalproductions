@@ -4,6 +4,14 @@
   min-height: 100vh;
 }
 
+.additionalInformation,
+.showcase,
+.pricing,
+.cta,
+.developer {
+  min-height: auto;
+}
+
 .hiddenContent {
   visibility: hidden;
 }
